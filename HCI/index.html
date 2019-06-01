@@ -35,10 +35,10 @@
 <body class="disable_transitions top_menu">
     <!-- main header -->
     <header id="header_main">
-        <div class="header_main_content">
+        <div class="header_main_content" style="opacity: 1; transform: translateY(0px); display: block;">
             <nav class="uk-navbar">
                 <div class="main_logo_top">
-                    <a href="index.html"><img src="assets/img/logo_main_white.png" alt="" height="15" width="71"/></a>
+                    <a href="index.html"><img src="assets/img/logo_main_white.png" alt="" height="15" width="71"></a>
                 </div>
                 
                 <!-- secondary sidebar switch -->
@@ -48,20 +48,18 @@
                 
                 <div class="uk-navbar-flip">
                     <ul class="uk-navbar-nav user_actions">
-                        <li><a href="#" id="main_search_btn" class="user_action_icon"><i class="material-icons md-24 md-light">&#xE8B6;</i></a></li>
-                        <li><a href="#" class="user_action_icon"><i class="material-icons md-24 md-light"></i><span class="uk-badge">16</span></a></li>
-                        <li><a href="#" class="user_action_image"><img class="md-user-image" src="assets/img/avatars/avatar_11_tn.png" alt=""></a></li>
+                        <li><a href="#" id="main_search_btn" class="user_action_icon"><i class="material-icons md-24 md-light"></i></a></li>
+                        <li><a href="login.html" class="user_action_icon"><i class="material-icons md-24 md-light">input</i></a></li>
                     </ul>
-                    
                 </div>
             </nav>
         </div>
-        <div class="header_main_search_form">
-            <i class="md-icon header_main_search_close material-icons">&#xE5CD;</i>
+        <div class="header_main_search_form" style="opacity: 0; display: none; transform: translateY(0px);">
+            <i class="md-icon header_main_search_close material-icons"></i>
             <form class="uk-form uk-autocomplete" data-uk-autocomplete="{source:'data/search_data.json'}">
-                <input type="text" class="header_main_search_input" />
-                <button class="header_main_search_btn uk-button-link"><i class="md-icon material-icons">&#xE8B6;</i></button>
-                <script type="text/autocomplete">
+                <input type="text" class="header_main_search_input" autocomplete="off">
+                <button class="header_main_search_btn uk-button-link"><i class="md-icon material-icons"></i></button>
+                <script async="" src="../www.google-analytics.com/analytics.js"></script><script src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js" type="text/javascript" async=""></script><script type="text/autocomplete">
                     <ul class="uk-nav uk-nav-autocomplete uk-autocomplete-results">
                         {{~items}}
                         <li data-value="{{ $item.value }}">
@@ -79,214 +77,215 @@
                         </li>
                     </ul>
                 </script>
-            </form>
-        </div>
-    </header><!-- main header end -->
-    <!-- top bar -->
-    <div id="top_bar">
-        <div class="md-top-bar">
-            <ul id="menu_top" class="uk-clearfix">
-                <li class="uk-hidden-small"><a href="index.html"><i class="material-icons">&#xE88A;</i></a></li>
-                <li class="uk-hidden-small"><a href="cate_news.html">IT</a></li>
-                <li class="uk-hidden-small"><a href="index.html">IT</a></li>
-                <li class="uk-hidden-small"><a href="index.html">IT</a></li>
-                <li class="uk-hidden-small"><a href="index.html">IT</a></li>
-            </ul>
-            
-        </div>
-    </div>
-    <!-- end top bar -->
-    <div id="page_content">
-        <div id="page_content_inner">
-            <div class="md-card uk-margin-large-bottom">
-                <div class="md-card-content">
-                    <h3 class="heading_a uk-margin-bottom">Hanu Homepage</h3>
-                    <div class="uk-slidenav-position" data-uk-slider="{autoplay: true,autoplayInterval: '5000'}">
-                        
-                        <div class="uk-slider-container">
-                            <ul class="uk-slider uk-grid uk-grid-small uk-grid-width-medium-1-4 uk-grid-width-small-1-2" style="min-width: 2174.32px; min-height: 128.395px; transform: translateX(-905.966px);">
-                                <li style="max-height: 200px; left: 0px; width: 181.193px;" data-slider-slide="0" class="uk-slide-before"><img src="assets/img/gallery/Image01.jpg" alt="" draggable="false"></li>
-                                <li style="max-height: 200px; left: 181.193px; width: 181.193px;" data-slider-slide="1" class="uk-slide-before"><img src="assets/img/gallery/Image02.jpg" alt="" draggable="false"></li>
-                                <li style="max-height: 200px; left: 362.386px; width: 181.193px;" data-slider-slide="2" class="uk-slide-before"><img src="assets/img/gallery/Image03.jpg" alt="" draggable="false"></li>
-                                <li style="max-height: 200px; left: 543.58px; width: 181.193px;" data-slider-slide="3" class="uk-slide-before"><img src="assets/img/gallery/Image04.jpg" alt="" draggable="false"></li>
-                                <li style="max-height: 200px; left: 724.773px; width: 181.193px;" data-slider-slide="4" class="uk-slide-before"><img src="assets/img/gallery/Image05.jpg" alt="" draggable="false"></li>
-                                <li style="max-height: 200px; left: 905.966px; width: 181.193px;" data-slider-slide="5" class=""><img src="assets/img/gallery/Image06.jpg" alt="" draggable="false"></li>
-                                <li style="max-height: 200px; left: 1087.16px; width: 181.193px;" data-slider-slide="6" class="uk-slide-after"><img src="assets/img/gallery/Image07.jpg" alt="" draggable="false"></li>
-                                <li style="max-height: 200px; left: 1268.35px; width: 181.193px;" data-slider-slide="7" class="uk-slide-after"><img src="assets/img/gallery/Image08.jpg" alt="" draggable="false"></li>
-                                <li style="max-height: 200px; left: 1449.55px; width: 181.193px;" data-slider-slide="8" class="uk-slide-after"><img src="assets/img/gallery/Image09.jpg" alt="" draggable="false"></li>
-                                <li style="max-height: 200px; left: 1630.74px; width: 181.193px;" data-slider-slide="9" class="uk-slide-after"><img src="assets/img/gallery/Image10.jpg" alt="" draggable="false"></li>
-                                <li style="max-height: 200px; left: 1811.93px; width: 181.193px;" data-slider-slide="10" class="uk-slide-after"><img src="assets/img/gallery/Image11.jpg" alt="" draggable="false"></li>
-                                <li style="max-height: 200px; left: 1993.12px; width: 181.193px;" data-slider-slide="11" class="uk-slide-after"><img src="assets/img/gallery/Image12.jpg" alt="" draggable="false"></li>
-                            </ul>
-                        </div>
-                        
-                        <a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slider-item="previous" draggable="false"></a>
-                        <a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slider-item="next" draggable="false"></a>
-                        
-                    </div>
-                </div>
+                <div class="uk-dropdown" aria-expanded="false"></div></form>
             </div>
-            
-            <h3 class="heading_b uk-margin-bottom">News</h3>
-            <div class="uk-grid-width-small-1-2 uk-grid-width-medium-1-3 uk-grid-width-large-1-4 uk-margin-large-bottom" data-uk-grid="{gutter: 20}" data-show-delay="280" style="position: relative; margin-left: -20px; height: 616px;">
-                <div class="md-card-content small-padding">
-                    <img src="assets/img/gallery/Image01.jpg" alt="" class="blog_list_teaser_image">
-                    <div class="blog_list_teaser">
-                        <h2 class="blog_list_teaser_title uk-text-truncate"><a href="news_details.html" >Quae dolor ut.</a></h2>
-                        <p>Ut accusantium voluptatem ad et repellat numquam sed voluptas provident numquam molestias necessitatibus et optio dolores pariatur iste omnis sunt temporibus velit.</p>
-                        <span class="uk-text-muted uk-text-small">18.06.2016</span>
-                        <a href="cate_news.html"><span class="uk-badge">Information Technology</span></a>
-                    </div>
-                    <div class="blog_list_footer">
-                        <div class="blog_list_footer_info">
-                            <span class="uk-margin-right"><i class="material-icons"></i> <small>13</small></span>
-                            <span><i class="material-icons"></i> <small>224</small></span>
-                        </div>
-                        <a href="page_blog_article.html" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary uk-float-right">Read more</a>
-                    </div>
-                </div>
-                <div class="md-card-content small-padding">
-                    <img src="assets/img/gallery/Image08.jpg" alt="" class="blog_list_teaser_image">
-                    <div class="blog_list_teaser">
-                        <h2 class="blog_list_teaser_title uk-text-truncate">Eos aspernatur est.</h2> 
-                        <p>Iste iure quia maiores ut optio nulla fugiat qui soluta.</p>
-                        <span class="uk-text-muted uk-text-small">18.06.2016</span>
-                    </div>
-                    <div class="blog_list_footer">
-                        <div class="blog_list_footer_info">
-                            <span class="uk-margin-right"><i class="material-icons"></i> <small>6</small></span>
-                            <span><i class="material-icons"></i> <small>149</small></span>
-                        </div>
-                        <a href="page_blog_article.html" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary uk-float-right">Read more</a>
-                    </div>
-                </div>
-                <div class="md-card-content small-padding">
-                    <img src="assets/img/gallery/Image05.jpg" alt="" class="blog_list_teaser_image">
-                    <div class="blog_list_teaser">
-                        <h2 class="blog_list_teaser_title uk-text-truncate">Saepe reprehenderit excepturi.</h2>
-                        <p>Eligendi eveniet unde dolore corrupti aut et nesciunt vel perspiciatis architecto error impedit nisi ad unde laborum magni ea molestiae magnam quia optio et.</p>
-                        <span class="uk-text-muted uk-text-small">18.06.2016</span>
-                    </div>
-                    <div class="blog_list_footer">
-                        <div class="blog_list_footer_info">
-                            <span class="uk-margin-right"><i class="material-icons"></i> <small>6</small></span>
-                            <span><i class="material-icons"></i> <small>97</small></span>
-                        </div>
-                        <a href="page_blog_article.html" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary uk-float-right">Read more</a>
-                    </div>
-                </div>>
-                <div>
-                    <div class="md-card">
-                        <div class="md-card-head md-bg-grey-900">
-                            <div class="uk-cover uk-position-relative uk-height-1-1 transform-origin-50" id="video_player" style="opacity: 1; transform: scale(1);">
-                                <iframe width="300" height="150" src="https://www.youtube.com/embed/cbDbT4mK26U" data-uk-cover="" frameborder="0" allowfullscreen="" style="max-height: 100%; width: 374px; height: 187px;"></iframe>
+        </header>
+        <!-- main header end -->
+        <!-- top bar -->
+        <div id="top_bar">
+            <div class="md-top-bar">
+                <ul id="menu_top" class="uk-clearfix">
+                    <li class="uk-hidden-small"><a href="index.html"><i class="material-icons">home</i></a></li>
+                    <li class="uk-hidden-small"><a href="cate_news.html">IT</a></li>
+                    <li class="uk-hidden-small"><a href="index.html">IT</a></li>
+                    <li class="uk-hidden-small"><a href="index.html">IT</a></li>
+                    <li class="uk-hidden-small"><a href="index.html">IT</a></li>
+                </ul>
+                
+            </div>
+        </div>
+        <!-- end top bar -->
+        <div id="page_content">
+            <div id="page_content_inner">
+                <div class="md-card uk-margin-large-bottom">
+                    <div class="md-card-content">
+                        <h3 class="heading_a uk-margin-bottom">Hanu Homepage</h3>
+                        <div class="uk-slidenav-position" data-uk-slider="{autoplay: true,autoplayInterval: '5000'}">
+                            
+                            <div class="uk-slider-container">
+                                <ul class="uk-slider uk-grid uk-grid-small uk-grid-width-medium-1-4 uk-grid-width-small-1-2" style="min-width: 2174.32px; min-height: 128.395px; transform: translateX(-905.966px);">
+                                    <li style="max-height: 200px; left: 0px; width: 181.193px;" data-slider-slide="0" class="uk-slide-before"><img src="assets/img/gallery/Image01.jpg" alt="" draggable="false"></li>
+                                    <li style="max-height: 200px; left: 181.193px; width: 181.193px;" data-slider-slide="1" class="uk-slide-before"><img src="assets/img/gallery/Image02.jpg" alt="" draggable="false"></li>
+                                    <li style="max-height: 200px; left: 362.386px; width: 181.193px;" data-slider-slide="2" class="uk-slide-before"><img src="assets/img/gallery/Image03.jpg" alt="" draggable="false"></li>
+                                    <li style="max-height: 200px; left: 543.58px; width: 181.193px;" data-slider-slide="3" class="uk-slide-before"><img src="assets/img/gallery/Image04.jpg" alt="" draggable="false"></li>
+                                    <li style="max-height: 200px; left: 724.773px; width: 181.193px;" data-slider-slide="4" class="uk-slide-before"><img src="assets/img/gallery/Image05.jpg" alt="" draggable="false"></li>
+                                    <li style="max-height: 200px; left: 905.966px; width: 181.193px;" data-slider-slide="5" class=""><img src="assets/img/gallery/Image06.jpg" alt="" draggable="false"></li>
+                                    <li style="max-height: 200px; left: 1087.16px; width: 181.193px;" data-slider-slide="6" class="uk-slide-after"><img src="assets/img/gallery/Image07.jpg" alt="" draggable="false"></li>
+                                    <li style="max-height: 200px; left: 1268.35px; width: 181.193px;" data-slider-slide="7" class="uk-slide-after"><img src="assets/img/gallery/Image08.jpg" alt="" draggable="false"></li>
+                                    <li style="max-height: 200px; left: 1449.55px; width: 181.193px;" data-slider-slide="8" class="uk-slide-after"><img src="assets/img/gallery/Image09.jpg" alt="" draggable="false"></li>
+                                    <li style="max-height: 200px; left: 1630.74px; width: 181.193px;" data-slider-slide="9" class="uk-slide-after"><img src="assets/img/gallery/Image10.jpg" alt="" draggable="false"></li>
+                                    <li style="max-height: 200px; left: 1811.93px; width: 181.193px;" data-slider-slide="10" class="uk-slide-after"><img src="assets/img/gallery/Image11.jpg" alt="" draggable="false"></li>
+                                    <li style="max-height: 200px; left: 1993.12px; width: 181.193px;" data-slider-slide="11" class="uk-slide-after"><img src="assets/img/gallery/Image12.jpg" alt="" draggable="false"></li>
+                                </ul>
                             </div>
-                        </div>
-                        <div class="md-card-content" style="min-height: 209px;">
-                            <ul class="md-list md-list-addon md-list-interactive" id="video_player_playlist">
-                                <li data-video-src="-CYs99M7hzA" class="md-list-item-active">
-                                    <div class="md-list-addon-element">
-                                        <i class="md-list-addon-icon material-icons"></i>
-                                    </div>
-                                    <div class="md-list-content">
-                                        <span class="md-list-heading">Unboxing the HERO4</span>
-                                        <span class="uk-text-small uk-text-muted">Mashable</span>
-                                    </div>
-                                </li>
-                                <li data-video-src="te689fEo2pY">
-                                    <div class="md-list-addon-element">
-                                        <i class="md-list-addon-icon material-icons"></i>
-                                    </div>
-                                    <div class="md-list-content">
-                                        <span class="md-list-heading">Apple Watch Unboxing &amp; Setup</span>
-                                        <span class="uk-text-small uk-text-muted">Unbox Therapy</span>
-                                    </div>
-                                </li>
-                                <li data-video-src="7AFJeaYojhU">
-                                    <div class="md-list-addon-element">
-                                        <i class="md-list-addon-icon material-icons"></i>
-                                    </div>
-                                    <div class="md-list-content">
-                                        <span class="md-list-heading">Energous WattUp Power Transmitter</span>
-                                        <span class="uk-text-small uk-text-muted">TechCrunch</span>
-                                    </div>
-                                </li>
-                                <li data-video-src="hajnEpCq5SE">
-                                    <div class="md-list-addon-element">
-                                        <i class="md-list-addon-icon material-icons"></i>
-                                    </div>
-                                    <div class="md-list-content">
-                                        <span class="md-list-heading">The new MacBook - Design</span>
-                                        <span class="uk-text-small uk-text-muted">Apple</span>
-                                    </div>
-                                </li>
-                            </ul>
+                            
+                            <a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slider-item="previous" draggable="false"></a>
+                            <a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slider-item="next" draggable="false"></a>
+                            
                         </div>
                     </div>
                 </div>
-                <div class="md-card">
+                
+                <h3 class="heading_b uk-margin-bottom">News</h3>
+                <div class="uk-grid-width-small-1-2 uk-grid-width-medium-1-3 uk-grid-width-large-1-4 uk-margin-large-bottom" data-uk-grid="{gutter: 20}" data-show-delay="280" style="position: relative; margin-left: -20px; height: 616px;">
                     <div class="md-card-content small-padding">
-                        <img src="assets/img/gallery/Image10.jpg" alt="" class="blog_list_teaser_image">
+                        <img src="assets/img/gallery/Image01.jpg" alt="" class="blog_list_teaser_image">
                         <div class="blog_list_teaser">
-                            <h2 class="blog_list_teaser_title uk-text-truncate">Delectus amet et.</h2>
-                            <p>Recusandae blanditiis quibusdam pariatur non non consequuntur aut qui tempora in totam vero non ea distinctio odit nostrum ut non molestiae harum et.</p>
+                            <h2 class="blog_list_teaser_title uk-text-truncate"><a href="news_details.html" >Quae dolor ut.</a></h2>
+                            <p>Ut accusantium voluptatem ad et repellat numquam sed voluptas provident numquam molestias necessitatibus et optio dolores pariatur iste omnis sunt temporibus velit.</p>
                             <span class="uk-text-muted uk-text-small">18.06.2016</span>
+                            <a href="cate_news.html"><span class="uk-badge">Information Technology</span></a>
                         </div>
                         <div class="blog_list_footer">
                             <div class="blog_list_footer_info">
-                                <span class="uk-margin-right"><i class="material-icons"></i> <small>11</small></span>
-                                <span><i class="material-icons"></i> <small>183</small></span>
+                                <span class="uk-margin-right"><i class="material-icons"></i> <small>13</small></span>
+                                <span><i class="material-icons"></i> <small>224</small></span>
                             </div>
                             <a href="page_blog_article.html" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary uk-float-right">Read more</a>
                         </div>
                     </div>
-                </div>
-                <div class="md-card-content small-padding">
-                    <img src="assets/img/gallery/Image04.jpg" alt="" class="blog_list_teaser_image">
-                    <div class="blog_list_teaser">
-                        <h2 class="blog_list_teaser_title uk-text-truncate">Quam esse.</h2>
-                        <p>Ipsum et corrupti eaque tempore natus fugit eos nisi quisquam recusandae sit maxime.</p>
-                        <span class="uk-text-muted uk-text-small">18.06.2016</span>
-                    </div>
-                    <div class="blog_list_footer">
-                        <div class="blog_list_footer_info">
-                            <span class="uk-margin-right"><i class="material-icons"></i> <small>23</small></span>
-                            <span><i class="material-icons"></i> <small>128</small></span>
+                    <div class="md-card-content small-padding">
+                        <img src="assets/img/gallery/Image08.jpg" alt="" class="blog_list_teaser_image">
+                        <div class="blog_list_teaser">
+                            <h2 class="blog_list_teaser_title uk-text-truncate">Eos aspernatur est.</h2> 
+                            <p>Iste iure quia maiores ut optio nulla fugiat qui soluta.</p>
+                            <span class="uk-text-muted uk-text-small">18.06.2016</span>
                         </div>
-                        <a href="page_blog_article.html" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary uk-float-right">Read more</a>
-                    </div>
-                </div>
-                <div class="md-card-content small-padding">
-                    <img src="assets/img/gallery/Image09.jpg" alt="" class="blog_list_teaser_image">
-                    <div class="blog_list_teaser">
-                        <h2 class="blog_list_teaser_title uk-text-truncate">Praesentium ipsa.</h2>
-                        <p>Consectetur esse cupiditate et et omnis architecto cumque assumenda quia quas quia et eum laboriosam nesciunt laborum labore non occaecati et numquam beatae.</p>
-                        <span class="uk-text-muted uk-text-small">18.06.2016</span>
-                    </div>
-                    <div class="blog_list_footer">
-                        <div class="blog_list_footer_info">
-                            <span class="uk-margin-right"><i class="material-icons"></i> <small>27</small></span>
-                            <span><i class="material-icons"></i> <small>66</small></span>
+                        <div class="blog_list_footer">
+                            <div class="blog_list_footer_info">
+                                <span class="uk-margin-right"><i class="material-icons"></i> <small>6</small></span>
+                                <span><i class="material-icons"></i> <small>149</small></span>
+                            </div>
+                            <a href="page_blog_article.html" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary uk-float-right">Read more</a>
                         </div>
-                        <a href="page_blog_article.html" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary uk-float-right">Read more</a>
                     </div>
-                </div>                  
-            </div>
-            <ul class="uk-pagination">
-                <li class="uk-disabled"><span><i class="uk-icon-angle-double-left"></i></span></li>
-                <li class="uk-active"><span>1</span></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><span>…</span></li>
-                <li><a href="#">20</a></li>
-                <li><a href="#"><i class="uk-icon-angle-double-right"></i></a></li>
-            </ul>
-            <hr>
-            <div class="uk-grid uk-grid-medium" data-uk-grid-margin="" data-uk-grid-match="{target:'.md-card'}">
-                <div class="uk-width-medium-2-3 uk-row-first">
-                    <div class="md-card" style="min-height: 164px;">
-                        <div class="md-card-content">
+                    <div class="md-card-content small-padding">
+                        <img src="assets/img/gallery/Image05.jpg" alt="" class="blog_list_teaser_image">
+                        <div class="blog_list_teaser">
+                            <h2 class="blog_list_teaser_title uk-text-truncate">Saepe reprehenderit excepturi.</h2>
+                            <p>Eligendi eveniet unde dolore corrupti aut et nesciunt vel perspiciatis architecto error impedit nisi ad unde laborum magni ea molestiae magnam quia optio et.</p>
+                            <span class="uk-text-muted uk-text-small">18.06.2016</span>
+                        </div>
+                        <div class="blog_list_footer">
+                            <div class="blog_list_footer_info">
+                                <span class="uk-margin-right"><i class="material-icons"></i> <small>6</small></span>
+                                <span><i class="material-icons"></i> <small>97</small></span>
+                            </div>
+                            <a href="page_blog_article.html" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary uk-float-right">Read more</a>
+                        </div>
+                    </div>>
+                    <div>
+                        <div class="md-card">
+                            <div class="md-card-head md-bg-grey-900">
+                                <div class="uk-cover uk-position-relative uk-height-1-1 transform-origin-50" id="video_player" style="opacity: 1; transform: scale(1);">
+                                    <iframe width="300" height="150" src="https://www.youtube.com/embed/cbDbT4mK26U" data-uk-cover="" frameborder="0" allowfullscreen="" style="max-height: 100%; width: 374px; height: 187px;"></iframe>
+                                </div>
+                            </div>
+                            <div class="md-card-content" style="min-height: 209px;">
+                                <ul class="md-list md-list-addon md-list-interactive" id="video_player_playlist">
+                                    <li data-video-src="-CYs99M7hzA" class="md-list-item-active">
+                                        <div class="md-list-addon-element">
+                                            <i class="md-list-addon-icon material-icons"></i>
+                                        </div>
+                                        <div class="md-list-content">
+                                            <span class="md-list-heading">Unboxing the HERO4</span>
+                                            <span class="uk-text-small uk-text-muted">Mashable</span>
+                                        </div>
+                                    </li>
+                                    <li data-video-src="te689fEo2pY">
+                                        <div class="md-list-addon-element">
+                                            <i class="md-list-addon-icon material-icons"></i>
+                                        </div>
+                                        <div class="md-list-content">
+                                            <span class="md-list-heading">Apple Watch Unboxing &amp; Setup</span>
+                                            <span class="uk-text-small uk-text-muted">Unbox Therapy</span>
+                                        </div>
+                                    </li>
+                                    <li data-video-src="7AFJeaYojhU">
+                                        <div class="md-list-addon-element">
+                                            <i class="md-list-addon-icon material-icons"></i>
+                                        </div>
+                                        <div class="md-list-content">
+                                            <span class="md-list-heading">Energous WattUp Power Transmitter</span>
+                                            <span class="uk-text-small uk-text-muted">TechCrunch</span>
+                                        </div>
+                                    </li>
+                                    <li data-video-src="hajnEpCq5SE">
+                                        <div class="md-list-addon-element">
+                                            <i class="md-list-addon-icon material-icons"></i>
+                                        </div>
+                                        <div class="md-list-content">
+                                            <span class="md-list-heading">The new MacBook - Design</span>
+                                            <span class="uk-text-small uk-text-muted">Apple</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md-card">
+                        <div class="md-card-content small-padding">
+                            <img src="assets/img/gallery/Image10.jpg" alt="" class="blog_list_teaser_image">
+                            <div class="blog_list_teaser">
+                                <h2 class="blog_list_teaser_title uk-text-truncate">Delectus amet et.</h2>
+                                <p>Recusandae blanditiis quibusdam pariatur non non consequuntur aut qui tempora in totam vero non ea distinctio odit nostrum ut non molestiae harum et.</p>
+                                <span class="uk-text-muted uk-text-small">18.06.2016</span>
+                            </div>
+                            <div class="blog_list_footer">
+                                <div class="blog_list_footer_info">
+                                    <span class="uk-margin-right"><i class="material-icons"></i> <small>11</small></span>
+                                    <span><i class="material-icons"></i> <small>183</small></span>
+                                </div>
+                                <a href="page_blog_article.html" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary uk-float-right">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md-card-content small-padding">
+                        <img src="assets/img/gallery/Image04.jpg" alt="" class="blog_list_teaser_image">
+                        <div class="blog_list_teaser">
+                            <h2 class="blog_list_teaser_title uk-text-truncate">Quam esse.</h2>
+                            <p>Ipsum et corrupti eaque tempore natus fugit eos nisi quisquam recusandae sit maxime.</p>
+                            <span class="uk-text-muted uk-text-small">18.06.2016</span>
+                        </div>
+                        <div class="blog_list_footer">
+                            <div class="blog_list_footer_info">
+                                <span class="uk-margin-right"><i class="material-icons"></i> <small>23</small></span>
+                                <span><i class="material-icons"></i> <small>128</small></span>
+                            </div>
+                            <a href="page_blog_article.html" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary uk-float-right">Read more</a>
+                        </div>
+                    </div>
+                    <div class="md-card-content small-padding">
+                        <img src="assets/img/gallery/Image09.jpg" alt="" class="blog_list_teaser_image">
+                        <div class="blog_list_teaser">
+                            <h2 class="blog_list_teaser_title uk-text-truncate">Praesentium ipsa.</h2>
+                            <p>Consectetur esse cupiditate et et omnis architecto cumque assumenda quia quas quia et eum laboriosam nesciunt laborum labore non occaecati et numquam beatae.</p>
+                            <span class="uk-text-muted uk-text-small">18.06.2016</span>
+                        </div>
+                        <div class="blog_list_footer">
+                            <div class="blog_list_footer_info">
+                                <span class="uk-margin-right"><i class="material-icons"></i> <small>27</small></span>
+                                <span><i class="material-icons"></i> <small>66</small></span>
+                            </div>
+                            <a href="page_blog_article.html" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary uk-float-right">Read more</a>
+                        </div>
+                    </div>                  
+                </div>
+                <ul class="uk-pagination">
+                    <li class="uk-disabled"><span><i class="uk-icon-angle-double-left"></i></span></li>
+                    <li class="uk-active"><span>1</span></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><span>…</span></li>
+                    <li><a href="#">20</a></li>
+                    <li><a href="#"><i class="uk-icon-angle-double-right"></i></a></li>
+                </ul>
+                <hr>
+                <div class="uk-grid uk-grid-medium" data-uk-grid-margin="" data-uk-grid-match="{target:'.md-card'}">
+                    <div class="uk-width-medium-2-3 uk-row-first">
+                        <div class="md-card" style="min-height: 164px;">
+                            <div class="md-card-content">
                                 <h3 class="heading_a uk-margin-bottom">Textual Slider</h3>
                                 <div class="uk-slidenav-position" data-uk-slider="">                           
                                     <div class="uk-slider-container">
@@ -344,348 +343,348 @@
                                     <a href="#" class="uk-slidenav uk-slidenav-next" data-uk-slider-item="next" draggable="false"></a>
                                     
                                 </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="uk-width-medium-1-3">
-                    <div class="md-card" style="min-height: 164px;">
-                        <div class="md-card-content">
+                    <div class="uk-width-medium-1-3">
+                        <div class="md-card" style="min-height: 164px;">
+                            <div class="md-card-content">
                                 Assumenda explicabo ut est assumenda nihil repudiandae voluptatem perspiciatis provident possimus reprehenderit dolor omnis ratione magnam at dolor modi illo ab et enim temporibus autem dolorem odit qui id aut quia cum eum hic veniam facilis error et.
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="uk-width-medium-3-6">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>
-                                    Post 1
-                                </th>
-                                <th>
-                                    Post 2
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div class="md-card md-card-fullscreen-activate" style="">
-                                        <div class="md-card-fullscreen-hide">
-                                            <img src="assets/img/gallery/Image02.jpg" alt="">
-                                            <div class="md-card-content">
-                                                <strong>Clickable card</strong><br>
-                                                <span class="uk-text-muted">Click on this card to activate fullscreen.</span>
+                    <div class="uk-width-medium-3-6">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Post 1
+                                    </th>
+                                    <th>
+                                        Post 2
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="md-card md-card-fullscreen-activate" >
+                                            <div class="md-card-fullscreen-hide">
+                                                <img src="assets/img/gallery/Image02.jpg" alt="">
+                                                <div class="md-card-content">
+                                                    <strong>Clickable card</strong><br>
+                                                    <span class="uk-text-muted">Click on this card to activate fullscreen.</span>
+                                                </div>
+                                            </div>
+                                            <div class="md-card-fullscreen-content" style="opacity: 0; display: none; transform: translateY(0px);">
+                                                <h2>Fullscreen content</h2>
+                                                <img src="assets/img/gallery/Image02.jpg" height="80px" width="80px" alt="">
+                                                <p class="uk-margin-large-top">Cumque ratione eveniet soluta sapiente autem laudantium aut quaerat nam molestiae cupiditate quia repellat aut ad aut officiis enim repellat quia debitis quod in minus qui sapiente architecto dolore est laboriosam omnis molestiae delectus et quia hic alias et ad autem minus neque reprehenderit blanditiis non laboriosam quos amet asperiores aliquam amet molestiae dolorem optio laudantium veritatis nobis vero quidem autem architecto exercitationem cum nemo aliquam consectetur enim est nostrum dolor eos excepturi fugiat assumenda doloremque in consequuntur omnis doloribus doloribus dicta soluta natus et consequatur ut repellendus et iste delectus ut dolores minima laboriosam quidem soluta fuga quaerat animi non officiis impedit quo est porro molestiae similique itaque at voluptates minima placeat non odio voluptatibus magnam dolorem fuga rerum blanditiis dolores reiciendis consequatur sunt sed quo rerum quidem dolores quis et dolores inventore sit possimus fuga voluptate nihil dolor ducimus quae officia veniam ut placeat ut vel eos amet quae deleniti quia ut et dignissimos deleniti vel totam ipsum autem autem qui corporis voluptas impedit unde cumque tempore nam eos assumenda corrupti error amet vitae repellendus quibusdam quod et voluptatem distinctio ut nemo molestias officiis ad alias ipsam ab ut cumque rerum eum earum exercitationem beatae qui quo ab enim reprehenderit minus voluptatem quod quam non et amet unde exercitationem ex rerum dolor aut dolorum sed temporibus est ea sunt omnis quidem praesentium tenetur dicta ullam ratione est blanditiis ut blanditiis illo cum rerum autem aperiam iusto id praesentium repudiandae aliquam est harum praesentium qui consequatur perferendis autem architecto quo id consequatur qui accusantium est aliquid deserunt modi rerum sed facere laborum in eveniet explicabo et mollitia porro eum ullam hic nostrum nihil quam at ullam vel deleniti mollitia ex magni velit atque et asperiores ea magnam ipsam omnis nam et sed hic et voluptas rem expedita blanditiis est quo distinctio ipsum ducimus accusamus blanditiis distinctio sit eos nihil quia natus ducimus minus exercitationem consectetur rerum sit impedit atque et atque modi beatae omnis incidunt nemo ipsum non sequi et ea tempore voluptas necessitatibus laudantium nulla amet inventore quod dolore dolore veritatis voluptas iusto velit hic soluta ut vero occaecati dignissimos voluptatibus et dolore deserunt tenetur voluptas libero quam aut soluta dolor delectus eaque minus autem pariatur explicabo tenetur ut dolore beatae fugit iste saepe voluptates nemo officia temporibus quas quas et excepturi qui placeat nobis aut dolor impedit similique similique qui id sequi nam eos sequi non hic eligendi magni voluptatem eum ab natus quam voluptas voluptas quasi dicta qui voluptatum commodi dicta quibusdam dolorem explicabo dignissimos ut nulla sit pariatur iste quisquam accusantium aut velit ea consequatur eius quo laboriosam facere eum aut aperiam tempore ut tempore aspernatur laboriosam velit distinctio consectetur sit voluptatem quis repudiandae eos quidem autem saepe eaque accusantium quaerat debitis maiores consequatur doloremque corrupti vel quam totam possimus asperiores et eum maiores fugiat nam distinctio voluptates asperiores aut cumque est eaque optio deserunt unde sit autem architecto officiis tempora recusandae qui qui eaque delectus animi et voluptatem quo architecto magni officia enim dolor dolorem qui saepe sed aut et aut vel consequatur numquam quis nihil facilis in qui dolore libero exercitationem nam aut sit perferendis repudiandae accusamus ex fuga veritatis atque deleniti repellat autem rerum dolore ut aliquid voluptates porro architecto eaque maxime laboriosam et facere dicta possimus.</p>
                                             </div>
                                         </div>
-                                        <div class="md-card-fullscreen-content" style="opacity: 0; display: none; transform: translateY(0px);">
-                                            <h2>Fullscreen content</h2>
-                                            <img src="assets/img/gallery/Image02.jpg" height="80px" width="80px" alt="">
-                                            <p class="uk-margin-large-top">Cumque ratione eveniet soluta sapiente autem laudantium aut quaerat nam molestiae cupiditate quia repellat aut ad aut officiis enim repellat quia debitis quod in minus qui sapiente architecto dolore est laboriosam omnis molestiae delectus et quia hic alias et ad autem minus neque reprehenderit blanditiis non laboriosam quos amet asperiores aliquam amet molestiae dolorem optio laudantium veritatis nobis vero quidem autem architecto exercitationem cum nemo aliquam consectetur enim est nostrum dolor eos excepturi fugiat assumenda doloremque in consequuntur omnis doloribus doloribus dicta soluta natus et consequatur ut repellendus et iste delectus ut dolores minima laboriosam quidem soluta fuga quaerat animi non officiis impedit quo est porro molestiae similique itaque at voluptates minima placeat non odio voluptatibus magnam dolorem fuga rerum blanditiis dolores reiciendis consequatur sunt sed quo rerum quidem dolores quis et dolores inventore sit possimus fuga voluptate nihil dolor ducimus quae officia veniam ut placeat ut vel eos amet quae deleniti quia ut et dignissimos deleniti vel totam ipsum autem autem qui corporis voluptas impedit unde cumque tempore nam eos assumenda corrupti error amet vitae repellendus quibusdam quod et voluptatem distinctio ut nemo molestias officiis ad alias ipsam ab ut cumque rerum eum earum exercitationem beatae qui quo ab enim reprehenderit minus voluptatem quod quam non et amet unde exercitationem ex rerum dolor aut dolorum sed temporibus est ea sunt omnis quidem praesentium tenetur dicta ullam ratione est blanditiis ut blanditiis illo cum rerum autem aperiam iusto id praesentium repudiandae aliquam est harum praesentium qui consequatur perferendis autem architecto quo id consequatur qui accusantium est aliquid deserunt modi rerum sed facere laborum in eveniet explicabo et mollitia porro eum ullam hic nostrum nihil quam at ullam vel deleniti mollitia ex magni velit atque et asperiores ea magnam ipsam omnis nam et sed hic et voluptas rem expedita blanditiis est quo distinctio ipsum ducimus accusamus blanditiis distinctio sit eos nihil quia natus ducimus minus exercitationem consectetur rerum sit impedit atque et atque modi beatae omnis incidunt nemo ipsum non sequi et ea tempore voluptas necessitatibus laudantium nulla amet inventore quod dolore dolore veritatis voluptas iusto velit hic soluta ut vero occaecati dignissimos voluptatibus et dolore deserunt tenetur voluptas libero quam aut soluta dolor delectus eaque minus autem pariatur explicabo tenetur ut dolore beatae fugit iste saepe voluptates nemo officia temporibus quas quas et excepturi qui placeat nobis aut dolor impedit similique similique qui id sequi nam eos sequi non hic eligendi magni voluptatem eum ab natus quam voluptas voluptas quasi dicta qui voluptatum commodi dicta quibusdam dolorem explicabo dignissimos ut nulla sit pariatur iste quisquam accusantium aut velit ea consequatur eius quo laboriosam facere eum aut aperiam tempore ut tempore aspernatur laboriosam velit distinctio consectetur sit voluptatem quis repudiandae eos quidem autem saepe eaque accusantium quaerat debitis maiores consequatur doloremque corrupti vel quam totam possimus asperiores et eum maiores fugiat nam distinctio voluptates asperiores aut cumque est eaque optio deserunt unde sit autem architecto officiis tempora recusandae qui qui eaque delectus animi et voluptatem quo architecto magni officia enim dolor dolorem qui saepe sed aut et aut vel consequatur numquam quis nihil facilis in qui dolore libero exercitationem nam aut sit perferendis repudiandae accusamus ex fuga veritatis atque deleniti repellat autem rerum dolore ut aliquid voluptates porro architecto eaque maxime laboriosam et facere dicta possimus.</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="md-card md-card-fullscreen-activate" style="">
-                                        <div class="md-card-fullscreen-hide">
-                                            <img src="assets/img/gallery/Image02.jpg" alt="">
-                                            <div class="md-card-content">
-                                                <strong>Clickable card</strong><br>
-                                                <span class="uk-text-muted">Click on this card to activate fullscreen.</span>
+                                    </td>
+                                    <td>
+                                        <div class="md-card md-card-fullscreen-activate">
+                                            <div class="md-card-fullscreen-hide">
+                                                <img src="assets/img/gallery/Image02.jpg" alt="">
+                                                <div class="md-card-content">
+                                                    <strong>Clickable card</strong><br>
+                                                    <span class="uk-text-muted">Click on this card to activate fullscreen.</span>
+                                                </div>
+                                            </div>
+                                            <div class="md-card-fullscreen-content" style="opacity: 0; display: none; transform: translateY(0px);">
+                                                <h2>Fullscreen content</h2>
+                                                <img src="assets/img/gallery/Image02.jpg" height="80px" width="80px" alt="">
+                                                <p class="uk-margin-large-top">Cumque ratione eveniet soluta sapiente autem laudantium aut quaerat nam molestiae cupiditate quia repellat aut ad aut officiis enim repellat quia debitis quod in minus qui sapiente architecto dolore est laboriosam omnis molestiae delectus et quia hic alias et ad autem minus neque reprehenderit blanditiis non laboriosam quos amet asperiores aliquam amet molestiae dolorem optio laudantium veritatis nobis vero quidem autem architecto exercitationem cum nemo aliquam consectetur enim est nostrum dolor eos excepturi fugiat assumenda doloremque in consequuntur omnis doloribus doloribus dicta soluta natus et consequatur ut repellendus et iste delectus ut dolores minima laboriosam quidem soluta fuga quaerat animi non officiis impedit quo est porro molestiae similique itaque at voluptates minima placeat non odio voluptatibus magnam dolorem fuga rerum blanditiis dolores reiciendis consequatur sunt sed quo rerum quidem dolores quis et dolores inventore sit possimus fuga voluptate nihil dolor ducimus quae officia veniam ut placeat ut vel eos amet quae deleniti quia ut et dignissimos deleniti vel totam ipsum autem autem qui corporis voluptas impedit unde cumque tempore nam eos assumenda corrupti error amet vitae repellendus quibusdam quod et voluptatem distinctio ut nemo molestias officiis ad alias ipsam ab ut cumque rerum eum earum exercitationem beatae qui quo ab enim reprehenderit minus voluptatem quod quam non et amet unde exercitationem ex rerum dolor aut dolorum sed temporibus est ea sunt omnis quidem praesentium tenetur dicta ullam ratione est blanditiis ut blanditiis illo cum rerum autem aperiam iusto id praesentium repudiandae aliquam est harum praesentium qui consequatur perferendis autem architecto quo id consequatur qui accusantium est aliquid deserunt modi rerum sed facere laborum in eveniet explicabo et mollitia porro eum ullam hic nostrum nihil quam at ullam vel deleniti mollitia ex magni velit atque et asperiores ea magnam ipsam omnis nam et sed hic et voluptas rem expedita blanditiis est quo distinctio ipsum ducimus accusamus blanditiis distinctio sit eos nihil quia natus ducimus minus exercitationem consectetur rerum sit impedit atque et atque modi beatae omnis incidunt nemo ipsum non sequi et ea tempore voluptas necessitatibus laudantium nulla amet inventore quod dolore dolore veritatis voluptas iusto velit hic soluta ut vero occaecati dignissimos voluptatibus et dolore deserunt tenetur voluptas libero quam aut soluta dolor delectus eaque minus autem pariatur explicabo tenetur ut dolore beatae fugit iste saepe voluptates nemo officia temporibus quas quas et excepturi qui placeat nobis aut dolor impedit similique similique qui id sequi nam eos sequi non hic eligendi magni voluptatem eum ab natus quam voluptas voluptas quasi dicta qui voluptatum commodi dicta quibusdam dolorem explicabo dignissimos ut nulla sit pariatur iste quisquam accusantium aut velit ea consequatur eius quo laboriosam facere eum aut aperiam tempore ut tempore aspernatur laboriosam velit distinctio consectetur sit voluptatem quis repudiandae eos quidem autem saepe eaque accusantium quaerat debitis maiores consequatur doloremque corrupti vel quam totam possimus asperiores et eum maiores fugiat nam distinctio voluptates asperiores aut cumque est eaque optio deserunt unde sit autem architecto officiis tempora recusandae qui qui eaque delectus animi et voluptatem quo architecto magni officia enim dolor dolorem qui saepe sed aut et aut vel consequatur numquam quis nihil facilis in qui dolore libero exercitationem nam aut sit perferendis repudiandae accusamus ex fuga veritatis atque deleniti repellat autem rerum dolore ut aliquid voluptates porro architecto eaque maxime laboriosam et facere dicta possimus.</p>
                                             </div>
                                         </div>
-                                        <div class="md-card-fullscreen-content" style="opacity: 0; display: none; transform: translateY(0px);">
-                                            <h2>Fullscreen content</h2>
-                                            <img src="assets/img/gallery/Image02.jpg" height="80px" width="80px" alt="">
-                                            <p class="uk-margin-large-top">Cumque ratione eveniet soluta sapiente autem laudantium aut quaerat nam molestiae cupiditate quia repellat aut ad aut officiis enim repellat quia debitis quod in minus qui sapiente architecto dolore est laboriosam omnis molestiae delectus et quia hic alias et ad autem minus neque reprehenderit blanditiis non laboriosam quos amet asperiores aliquam amet molestiae dolorem optio laudantium veritatis nobis vero quidem autem architecto exercitationem cum nemo aliquam consectetur enim est nostrum dolor eos excepturi fugiat assumenda doloremque in consequuntur omnis doloribus doloribus dicta soluta natus et consequatur ut repellendus et iste delectus ut dolores minima laboriosam quidem soluta fuga quaerat animi non officiis impedit quo est porro molestiae similique itaque at voluptates minima placeat non odio voluptatibus magnam dolorem fuga rerum blanditiis dolores reiciendis consequatur sunt sed quo rerum quidem dolores quis et dolores inventore sit possimus fuga voluptate nihil dolor ducimus quae officia veniam ut placeat ut vel eos amet quae deleniti quia ut et dignissimos deleniti vel totam ipsum autem autem qui corporis voluptas impedit unde cumque tempore nam eos assumenda corrupti error amet vitae repellendus quibusdam quod et voluptatem distinctio ut nemo molestias officiis ad alias ipsam ab ut cumque rerum eum earum exercitationem beatae qui quo ab enim reprehenderit minus voluptatem quod quam non et amet unde exercitationem ex rerum dolor aut dolorum sed temporibus est ea sunt omnis quidem praesentium tenetur dicta ullam ratione est blanditiis ut blanditiis illo cum rerum autem aperiam iusto id praesentium repudiandae aliquam est harum praesentium qui consequatur perferendis autem architecto quo id consequatur qui accusantium est aliquid deserunt modi rerum sed facere laborum in eveniet explicabo et mollitia porro eum ullam hic nostrum nihil quam at ullam vel deleniti mollitia ex magni velit atque et asperiores ea magnam ipsam omnis nam et sed hic et voluptas rem expedita blanditiis est quo distinctio ipsum ducimus accusamus blanditiis distinctio sit eos nihil quia natus ducimus minus exercitationem consectetur rerum sit impedit atque et atque modi beatae omnis incidunt nemo ipsum non sequi et ea tempore voluptas necessitatibus laudantium nulla amet inventore quod dolore dolore veritatis voluptas iusto velit hic soluta ut vero occaecati dignissimos voluptatibus et dolore deserunt tenetur voluptas libero quam aut soluta dolor delectus eaque minus autem pariatur explicabo tenetur ut dolore beatae fugit iste saepe voluptates nemo officia temporibus quas quas et excepturi qui placeat nobis aut dolor impedit similique similique qui id sequi nam eos sequi non hic eligendi magni voluptatem eum ab natus quam voluptas voluptas quasi dicta qui voluptatum commodi dicta quibusdam dolorem explicabo dignissimos ut nulla sit pariatur iste quisquam accusantium aut velit ea consequatur eius quo laboriosam facere eum aut aperiam tempore ut tempore aspernatur laboriosam velit distinctio consectetur sit voluptatem quis repudiandae eos quidem autem saepe eaque accusantium quaerat debitis maiores consequatur doloremque corrupti vel quam totam possimus asperiores et eum maiores fugiat nam distinctio voluptates asperiores aut cumque est eaque optio deserunt unde sit autem architecto officiis tempora recusandae qui qui eaque delectus animi et voluptatem quo architecto magni officia enim dolor dolorem qui saepe sed aut et aut vel consequatur numquam quis nihil facilis in qui dolore libero exercitationem nam aut sit perferendis repudiandae accusamus ex fuga veritatis atque deleniti repellat autem rerum dolore ut aliquid voluptates porro architecto eaque maxime laboriosam et facere dicta possimus.</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>    
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>    
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <!-- google web fonts -->
-        <script>
-            WebFontConfig = {
-                google: {
-                    families: [
-                    'Source+Code+Pro:400,700:latin',
-                    'Roboto:400,300,500,700,400italic:latin'
-                    ]
-                }
-            };
-            (function() {
-                var wf = document.createElement('script');
-                wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-                '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-                wf.type = 'text/javascript';
-                wf.async = 'true';
-                var s = document.getElementsByTagName('script')[0];
-                s.parentNode.insertBefore(wf, s);
-            })();
-        </script>
-        
-        <!-- common functions -->
-        <script src="assets/js/common.min.js"></script>
-        <!-- uikit functions -->
-        <script src="assets/js/uikit_custom.min.js"></script>
-        <!-- altair common functions/helpers -->
-        <script src="assets/js/altair_admin_common.min.js"></script>
-        
-        
-        <script>
-            $(function() {
-                if(isHighDensity()) {
-                    $.getScript( "assets/js/custom/dense.min.js", function(data) {
-                        // enable hires images
-                        altair_helpers.retina_images();
+            
+            <!-- google web fonts -->
+            <script>
+                WebFontConfig = {
+                    google: {
+                        families: [
+                        'Source+Code+Pro:400,700:latin',
+                        'Roboto:400,300,500,700,400italic:latin'
+                        ]
+                    }
+                };
+                (function() {
+                    var wf = document.createElement('script');
+                    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+                    '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+                    wf.type = 'text/javascript';
+                    wf.async = 'true';
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(wf, s);
+                })();
+            </script>
+            
+            <!-- common functions -->
+            <script src="assets/js/common.min.js"></script>
+            <!-- uikit functions -->
+            <script src="assets/js/uikit_custom.min.js"></script>
+            <!-- altair common functions/helpers -->
+            <script src="assets/js/altair_admin_common.min.js"></script>
+            
+            
+            <script>
+                $(function() {
+                    if(isHighDensity()) {
+                        $.getScript( "assets/js/custom/dense.min.js", function(data) {
+                            // enable hires images
+                            altair_helpers.retina_images();
+                        });
+                    }
+                    if(Modernizr.touch) {
+                        // fastClick (touch devices)
+                        FastClick.attach(document.body);
+                    }
+                });
+                $window.load(function() {
+                    // ie fixes
+                    altair_helpers.ie_fix();
+                });
+            </script>
+            
+            <script>
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+                ga('create', 'UA-65191727-1', 'auto');
+                ga('send', 'pageview');
+            </script>
+            
+            <div id="style_switcher">
+                <div id="style_switcher_toggle"><i class="material-icons">&#xE8B8;</i></div>
+                <div class="uk-margin-medium-bottom">
+                    <h4 class="heading_c uk-margin-bottom">Colors</h4>
+                    <ul class="switcher_app_themes" id="theme_switcher">
+                        <li class="app_style_default active_theme" data-app-theme="">
+                            <span class="app_color_main"></span>
+                            <span class="app_color_accent"></span>
+                        </li>
+                        <li class="switcher_theme_a" data-app-theme="app_theme_a">
+                            <span class="app_color_main"></span>
+                            <span class="app_color_accent"></span>
+                        </li>
+                        <li class="switcher_theme_b" data-app-theme="app_theme_b">
+                            <span class="app_color_main"></span>
+                            <span class="app_color_accent"></span>
+                        </li>
+                        <li class="switcher_theme_c" data-app-theme="app_theme_c">
+                            <span class="app_color_main"></span>
+                            <span class="app_color_accent"></span>
+                        </li>
+                        <li class="switcher_theme_d" data-app-theme="app_theme_d">
+                            <span class="app_color_main"></span>
+                            <span class="app_color_accent"></span>
+                        </li>
+                        <li class="switcher_theme_e" data-app-theme="app_theme_e">
+                            <span class="app_color_main"></span>
+                            <span class="app_color_accent"></span>
+                        </li>
+                        <li class="switcher_theme_f" data-app-theme="app_theme_f">
+                            <span class="app_color_main"></span>
+                            <span class="app_color_accent"></span>
+                        </li>
+                        <li class="switcher_theme_g" data-app-theme="app_theme_g">
+                            <span class="app_color_main"></span>
+                            <span class="app_color_accent"></span>
+                        </li>
+                        <li class="switcher_theme_h" data-app-theme="app_theme_h">
+                            <span class="app_color_main"></span>
+                            <span class="app_color_accent"></span>
+                        </li>
+                        <li class="switcher_theme_i" data-app-theme="app_theme_i">
+                            <span class="app_color_main"></span>
+                            <span class="app_color_accent"></span>
+                        </li>
+                        <li class="switcher_theme_dark" data-app-theme="app_theme_dark">
+                            <span class="app_color_main"></span>
+                            <span class="app_color_accent"></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="uk-visible-large uk-margin-medium-bottom">
+                    <h4 class="heading_c">Sidebar</h4>
+                    <p>
+                        <input type="checkbox" name="style_sidebar_mini" id="style_sidebar_mini" data-md-icheck />
+                        <label for="style_sidebar_mini" class="inline-label">Mini Sidebar</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" name="style_sidebar_slim" id="style_sidebar_slim" data-md-icheck />
+                        <label for="style_sidebar_slim" class="inline-label">Slim Sidebar</label>
+                    </p>
+                </div>
+                <div class="uk-visible-large uk-margin-medium-bottom">
+                    <h4 class="heading_c">Layout</h4>
+                    <p>
+                        <input type="checkbox" name="style_layout_boxed" id="style_layout_boxed" data-md-icheck />
+                        <label for="style_layout_boxed" class="inline-label">Boxed layout</label>
+                    </p>
+                </div>
+                <div class="uk-visible-large">
+                    <h4 class="heading_c">Main menu accordion</h4>
+                    <p>
+                        <input type="checkbox" name="accordion_mode_main_menu" id="accordion_mode_main_menu" data-md-icheck />
+                        <label for="accordion_mode_main_menu" class="inline-label">Accordion mode</label>
+                    </p>
+                </div>
+            </div>
+            
+            <script>
+                $(function() {
+                    var $switcher = $('#style_switcher'),
+                    $switcher_toggle = $('#style_switcher_toggle'),
+                    $theme_switcher = $('#theme_switcher'),
+                    $mini_sidebar_toggle = $('#style_sidebar_mini'),
+                    $slim_sidebar_toggle = $('#style_sidebar_slim'),
+                    $boxed_layout_toggle = $('#style_layout_boxed'),
+                    $accordion_mode_toggle = $('#accordion_mode_main_menu'),
+                    $html = $('html'),
+                    $body = $('body');
+                    
+                    
+                    $switcher_toggle.click(function(e) {
+                        e.preventDefault();
+                        $switcher.toggleClass('switcher_active');
                     });
-                }
-                if(Modernizr.touch) {
-                    // fastClick (touch devices)
-                    FastClick.attach(document.body);
-                }
-            });
-            $window.load(function() {
-                // ie fixes
-                altair_helpers.ie_fix();
-            });
-        </script>
-        
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
-            ga('create', 'UA-65191727-1', 'auto');
-            ga('send', 'pageview');
-        </script>
-        
-        <div id="style_switcher">
-            <div id="style_switcher_toggle"><i class="material-icons">&#xE8B8;</i></div>
-            <div class="uk-margin-medium-bottom">
-                <h4 class="heading_c uk-margin-bottom">Colors</h4>
-                <ul class="switcher_app_themes" id="theme_switcher">
-                    <li class="app_style_default active_theme" data-app-theme="">
-                        <span class="app_color_main"></span>
-                        <span class="app_color_accent"></span>
-                    </li>
-                    <li class="switcher_theme_a" data-app-theme="app_theme_a">
-                        <span class="app_color_main"></span>
-                        <span class="app_color_accent"></span>
-                    </li>
-                    <li class="switcher_theme_b" data-app-theme="app_theme_b">
-                        <span class="app_color_main"></span>
-                        <span class="app_color_accent"></span>
-                    </li>
-                    <li class="switcher_theme_c" data-app-theme="app_theme_c">
-                        <span class="app_color_main"></span>
-                        <span class="app_color_accent"></span>
-                    </li>
-                    <li class="switcher_theme_d" data-app-theme="app_theme_d">
-                        <span class="app_color_main"></span>
-                        <span class="app_color_accent"></span>
-                    </li>
-                    <li class="switcher_theme_e" data-app-theme="app_theme_e">
-                        <span class="app_color_main"></span>
-                        <span class="app_color_accent"></span>
-                    </li>
-                    <li class="switcher_theme_f" data-app-theme="app_theme_f">
-                        <span class="app_color_main"></span>
-                        <span class="app_color_accent"></span>
-                    </li>
-                    <li class="switcher_theme_g" data-app-theme="app_theme_g">
-                        <span class="app_color_main"></span>
-                        <span class="app_color_accent"></span>
-                    </li>
-                    <li class="switcher_theme_h" data-app-theme="app_theme_h">
-                        <span class="app_color_main"></span>
-                        <span class="app_color_accent"></span>
-                    </li>
-                    <li class="switcher_theme_i" data-app-theme="app_theme_i">
-                        <span class="app_color_main"></span>
-                        <span class="app_color_accent"></span>
-                    </li>
-                    <li class="switcher_theme_dark" data-app-theme="app_theme_dark">
-                        <span class="app_color_main"></span>
-                        <span class="app_color_accent"></span>
-                    </li>
-                </ul>
-            </div>
-            <div class="uk-visible-large uk-margin-medium-bottom">
-                <h4 class="heading_c">Sidebar</h4>
-                <p>
-                    <input type="checkbox" name="style_sidebar_mini" id="style_sidebar_mini" data-md-icheck />
-                    <label for="style_sidebar_mini" class="inline-label">Mini Sidebar</label>
-                </p>
-                <p>
-                    <input type="checkbox" name="style_sidebar_slim" id="style_sidebar_slim" data-md-icheck />
-                    <label for="style_sidebar_slim" class="inline-label">Slim Sidebar</label>
-                </p>
-            </div>
-            <div class="uk-visible-large uk-margin-medium-bottom">
-                <h4 class="heading_c">Layout</h4>
-                <p>
-                    <input type="checkbox" name="style_layout_boxed" id="style_layout_boxed" data-md-icheck />
-                    <label for="style_layout_boxed" class="inline-label">Boxed layout</label>
-                </p>
-            </div>
-            <div class="uk-visible-large">
-                <h4 class="heading_c">Main menu accordion</h4>
-                <p>
-                    <input type="checkbox" name="accordion_mode_main_menu" id="accordion_mode_main_menu" data-md-icheck />
-                    <label for="accordion_mode_main_menu" class="inline-label">Accordion mode</label>
-                </p>
-            </div>
-        </div>
-        
-        <script>
-            $(function() {
-                var $switcher = $('#style_switcher'),
-                $switcher_toggle = $('#style_switcher_toggle'),
-                $theme_switcher = $('#theme_switcher'),
-                $mini_sidebar_toggle = $('#style_sidebar_mini'),
-                $slim_sidebar_toggle = $('#style_sidebar_slim'),
-                $boxed_layout_toggle = $('#style_layout_boxed'),
-                $accordion_mode_toggle = $('#accordion_mode_main_menu'),
-                $html = $('html'),
-                $body = $('body');
-                
-                
-                $switcher_toggle.click(function(e) {
-                    e.preventDefault();
-                    $switcher.toggleClass('switcher_active');
-                });
-                
-                $theme_switcher.children('li').click(function(e) {
-                    e.preventDefault();
-                    var $this = $(this),
-                    this_theme = $this.attr('data-app-theme');
                     
-                    $theme_switcher.children('li').removeClass('active_theme');
-                    $(this).addClass('active_theme');
-                    $html
-                    .removeClass('app_theme_a app_theme_b app_theme_c app_theme_d app_theme_e app_theme_f app_theme_g app_theme_h app_theme_i app_theme_dark')
-                    .addClass(this_theme);
-                    
-                    if(this_theme == '') {
-                        localStorage.removeItem('altair_theme');
-                        $('#kendoCSS').attr('href','bower_components/kendo-ui/styles/kendo.material.min.css');
-                    } else {
-                        localStorage.setItem("altair_theme", this_theme);
-                        if(this_theme == 'app_theme_dark') {
-                            $('#kendoCSS').attr('href','bower_components/kendo-ui/styles/kendo.materialblack.min.css')
-                        } else {
+                    $theme_switcher.children('li').click(function(e) {
+                        e.preventDefault();
+                        var $this = $(this),
+                        this_theme = $this.attr('data-app-theme');
+                        
+                        $theme_switcher.children('li').removeClass('active_theme');
+                        $(this).addClass('active_theme');
+                        $html
+                        .removeClass('app_theme_a app_theme_b app_theme_c app_theme_d app_theme_e app_theme_f app_theme_g app_theme_h app_theme_i app_theme_dark')
+                        .addClass(this_theme);
+                        
+                        if(this_theme == '') {
+                            localStorage.removeItem('altair_theme');
                             $('#kendoCSS').attr('href','bower_components/kendo-ui/styles/kendo.material.min.css');
+                        } else {
+                            localStorage.setItem("altair_theme", this_theme);
+                            if(this_theme == 'app_theme_dark') {
+                                $('#kendoCSS').attr('href','bower_components/kendo-ui/styles/kendo.materialblack.min.css')
+                            } else {
+                                $('#kendoCSS').attr('href','bower_components/kendo-ui/styles/kendo.material.min.css');
+                            }
                         }
+                        
+                    });
+                    
+                    // hide style switcher
+                    $document.on('click keyup', function(e) {
+                        if( $switcher.hasClass('switcher_active') ) {
+                            if (
+                            ( !$(e.target).closest($switcher).length )
+                            || ( e.keyCode == 27 )
+                            ) {
+                                $switcher.removeClass('switcher_active');
+                            }
+                        }
+                    });
+                    
+                    // get theme from local storage
+                    if(localStorage.getItem("altair_theme") !== null) {
+                        $theme_switcher.children('li[data-app-theme='+localStorage.getItem("altair_theme")+']').click();
                     }
                     
-                });
-                
-                // hide style switcher
-                $document.on('click keyup', function(e) {
-                    if( $switcher.hasClass('switcher_active') ) {
-                        if (
-                        ( !$(e.target).closest($switcher).length )
-                        || ( e.keyCode == 27 )
-                        ) {
-                            $switcher.removeClass('switcher_active');
-                        }
+                    
+                    // toggle mini sidebar
+                    
+                    // change input's state to checked if mini sidebar is active
+                    if((localStorage.getItem("altair_sidebar_mini") !== null && localStorage.getItem("altair_sidebar_mini") == '1') || $body.hasClass('sidebar_mini')) {
+                        $mini_sidebar_toggle.iCheck('check');
                     }
+                    
+                    $mini_sidebar_toggle
+                    .on('ifChecked', function(event){
+                        $switcher.removeClass('switcher_active');
+                        localStorage.setItem("altair_sidebar_mini", '1');
+                        localStorage.removeItem('altair_sidebar_slim');
+                        location.reload(true);
+                    })
+                    .on('ifUnchecked', function(event){
+                        $switcher.removeClass('switcher_active');
+                        localStorage.removeItem('altair_sidebar_mini');
+                        location.reload(true);
+                    });
+                    
+                    // toggle slim sidebar
+                    
+                    // change input's state to checked if mini sidebar is active
+                    if((localStorage.getItem("altair_sidebar_slim") !== null && localStorage.getItem("altair_sidebar_slim") == '1') || $body.hasClass('sidebar_slim')) {
+                        $slim_sidebar_toggle.iCheck('check');
+                    }
+                    
+                    $slim_sidebar_toggle
+                    .on('ifChecked', function(event){
+                        $switcher.removeClass('switcher_active');
+                        localStorage.setItem("altair_sidebar_slim", '1');
+                        localStorage.removeItem('altair_sidebar_mini');
+                        location.reload(true);
+                    })
+                    .on('ifUnchecked', function(event){
+                        $switcher.removeClass('switcher_active');
+                        localStorage.removeItem('altair_sidebar_slim');
+                        location.reload(true);
+                    });
+                    
+                    // toggle boxed layout
+                    
+                    if((localStorage.getItem("altair_layout") !== null && localStorage.getItem("altair_layout") == 'boxed') || $body.hasClass('boxed_layout')) {
+                        $boxed_layout_toggle.iCheck('check');
+                        $body.addClass('boxed_layout');
+                        $(window).resize();
+                    }
+                    
+                    $boxed_layout_toggle
+                    .on('ifChecked', function(event){
+                        $switcher.removeClass('switcher_active');
+                        localStorage.setItem("altair_layout", 'boxed');
+                        location.reload(true);
+                    })
+                    .on('ifUnchecked', function(event){
+                        $switcher.removeClass('switcher_active');
+                        localStorage.removeItem('altair_layout');
+                        location.reload(true);
+                    });
+                    
+                    // main menu accordion mode
+                    if($sidebar_main.hasClass('accordion_mode')) {
+                        $accordion_mode_toggle.iCheck('check');
+                    }
+                    
+                    $accordion_mode_toggle
+                    .on('ifChecked', function(){
+                        $sidebar_main.addClass('accordion_mode');
+                    })
+                    .on('ifUnchecked', function(){
+                        $sidebar_main.removeClass('accordion_mode');
+                    });
+                    
+                    
                 });
-                
-                // get theme from local storage
-                if(localStorage.getItem("altair_theme") !== null) {
-                    $theme_switcher.children('li[data-app-theme='+localStorage.getItem("altair_theme")+']').click();
-                }
-                
-                
-                // toggle mini sidebar
-                
-                // change input's state to checked if mini sidebar is active
-                if((localStorage.getItem("altair_sidebar_mini") !== null && localStorage.getItem("altair_sidebar_mini") == '1') || $body.hasClass('sidebar_mini')) {
-                    $mini_sidebar_toggle.iCheck('check');
-                }
-                
-                $mini_sidebar_toggle
-                .on('ifChecked', function(event){
-                    $switcher.removeClass('switcher_active');
-                    localStorage.setItem("altair_sidebar_mini", '1');
-                    localStorage.removeItem('altair_sidebar_slim');
-                    location.reload(true);
-                })
-                .on('ifUnchecked', function(event){
-                    $switcher.removeClass('switcher_active');
-                    localStorage.removeItem('altair_sidebar_mini');
-                    location.reload(true);
-                });
-                
-                // toggle slim sidebar
-                
-                // change input's state to checked if mini sidebar is active
-                if((localStorage.getItem("altair_sidebar_slim") !== null && localStorage.getItem("altair_sidebar_slim") == '1') || $body.hasClass('sidebar_slim')) {
-                    $slim_sidebar_toggle.iCheck('check');
-                }
-                
-                $slim_sidebar_toggle
-                .on('ifChecked', function(event){
-                    $switcher.removeClass('switcher_active');
-                    localStorage.setItem("altair_sidebar_slim", '1');
-                    localStorage.removeItem('altair_sidebar_mini');
-                    location.reload(true);
-                })
-                .on('ifUnchecked', function(event){
-                    $switcher.removeClass('switcher_active');
-                    localStorage.removeItem('altair_sidebar_slim');
-                    location.reload(true);
-                });
-                
-                // toggle boxed layout
-                
-                if((localStorage.getItem("altair_layout") !== null && localStorage.getItem("altair_layout") == 'boxed') || $body.hasClass('boxed_layout')) {
-                    $boxed_layout_toggle.iCheck('check');
-                    $body.addClass('boxed_layout');
-                    $(window).resize();
-                }
-                
-                $boxed_layout_toggle
-                .on('ifChecked', function(event){
-                    $switcher.removeClass('switcher_active');
-                    localStorage.setItem("altair_layout", 'boxed');
-                    location.reload(true);
-                })
-                .on('ifUnchecked', function(event){
-                    $switcher.removeClass('switcher_active');
-                    localStorage.removeItem('altair_layout');
-                    location.reload(true);
-                });
-                
-                // main menu accordion mode
-                if($sidebar_main.hasClass('accordion_mode')) {
-                    $accordion_mode_toggle.iCheck('check');
-                }
-                
-                $accordion_mode_toggle
-                .on('ifChecked', function(){
-                    $sidebar_main.addClass('accordion_mode');
-                })
-                .on('ifUnchecked', function(){
-                    $sidebar_main.removeClass('accordion_mode');
-                });
-                
-                
-            });
-        </script>
-        <footer id="footer">
-            © 2019 <a href="#">Hanu Codee</a>, All rights reserved.
-        </footer>
-    </body>
-    
-    <!-- Mirrored from altair_html.tzdthemes.com/layout_top_menu.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Jul 2018 15:37:18 GMT -->
-    </html>
+            </script>
+            <footer id="footer">
+                © 2019 <a href="#">Hanu Codee</a>, All rights reserved.
+            </footer>
+        </body>
+        
+        <!-- Mirrored from altair_html.tzdthemes.com/layout_top_menu.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Jul 2018 15:37:18 GMT -->
+        </html>
