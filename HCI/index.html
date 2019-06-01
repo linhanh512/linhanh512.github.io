@@ -30,248 +30,331 @@
     <link rel="stylesheet" href="assets/css/main.min.css" media="all">
     
     <!-- themes -->
-    <link rel="stylesheet" href="assets/css/themes/themes_combined.min.css" media="all">
-    
-    <!-- matchMedia polyfill for testing media queries in JS -->
-    <!--[if lte IE 9]>
-        <script type="text/javascript" src="bower_components/matchMedia/matchMedia.js"></script>
-        <script type="text/javascript" src="bower_components/matchMedia/matchMedia.addListener.js"></script>
-        <link rel="stylesheet" href="assets/css/ie.css" media="all">
-        <![endif]-->
-        
-    </head>
-    <body class="disable_transitions top_menu">
-        <!-- main header -->
-        <header id="header_main">
-            <div class="header_main_content">
-                <nav class="uk-navbar">
-                    <div class="main_logo_top">
-                        <a href="index.html"><img src="assets/img/logo_main_white.png" alt="" height="15" width="71"/></a>
-                    </div>
+    <link rel="stylesheet" href="assets/css/themes/themes_combined.min.css" media="all">     
+</head>
+<body class="disable_transitions top_menu">
+    <!-- main header -->
+    <header id="header_main">
+        <div class="header_main_content">
+            <nav class="uk-navbar">
+                <div class="main_logo_top">
+                    <a href="index.html"><img src="assets/img/logo_main_white.png" alt="" height="15" width="71"/></a>
+                </div>
+                
+                <!-- secondary sidebar switch -->
+                <a href="#" id="sidebar_secondary_toggle" class="sSwitch sSwitch_right sidebar_secondary_check">
+                    <span class="sSwitchIcon"></span>
+                </a>
+                
+                <div class="uk-navbar-flip">
+                    <ul class="uk-navbar-nav user_actions">
+                        <li><a href="#" id="main_search_btn" class="user_action_icon"><i class="material-icons md-24 md-light">&#xE8B6;</i></a></li>
+                        <li><a href="#" class="user_action_icon"><i class="material-icons md-24 md-light"></i><span class="uk-badge">16</span></a></li>
+                        <li><a href="#" class="user_action_image"><img class="md-user-image" src="assets/img/avatars/avatar_11_tn.png" alt=""></a></li>
+                    </ul>
                     
-                    <!-- secondary sidebar switch -->
-                    <a href="#" id="sidebar_secondary_toggle" class="sSwitch sSwitch_right sidebar_secondary_check">
-                        <span class="sSwitchIcon"></span>
-                    </a>
-                    
-                    <div class="uk-navbar-flip">
-                        <ul class="uk-navbar-nav user_actions">
-                            <li><a href="#" id="main_search_btn" class="user_action_icon"><i class="material-icons md-24 md-light">&#xE8B6;</i></a></li>
-                        </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="header_main_search_form">
+            <i class="md-icon header_main_search_close material-icons">&#xE5CD;</i>
+            <form class="uk-form uk-autocomplete" data-uk-autocomplete="{source:'data/search_data.json'}">
+                <input type="text" class="header_main_search_input" />
+                <button class="header_main_search_btn uk-button-link"><i class="md-icon material-icons">&#xE8B6;</i></button>
+                <script type="text/autocomplete">
+                    <ul class="uk-nav uk-nav-autocomplete uk-autocomplete-results">
+                        {{~items}}
+                        <li data-value="{{ $item.value }}">
+                            <a href="{{ $item.url }}" class="needsclick">
+                                {{ $item.value }}<br>
+                                <span class="uk-text-muted uk-text-small">{{{ $item.text }}}</span>
+                            </a>
+                        </li>
+                        {{/items}}
+                        <li data-value="autocomplete-value">
+                            <a class="needsclick">
+                                Autocomplete Text<br>
+                                <span class="uk-text-muted uk-text-small">Helper text</span>
+                            </a>
+                        </li>
+                    </ul>
+                </script>
+            </form>
+        </div>
+    </header><!-- main header end -->
+    <!-- top bar -->
+    <div id="top_bar">
+        <div class="md-top-bar">
+            <ul id="menu_top" class="uk-clearfix">
+                <li class="uk-hidden-small"><a href="index.html"><i class="material-icons">&#xE88A;</i></a></li>
+                <li class="uk-hidden-small"><a href="cate_news.html">IT</a></li>
+                <li class="uk-hidden-small"><a href="index.html">IT</a></li>
+                <li class="uk-hidden-small"><a href="index.html">IT</a></li>
+                <li class="uk-hidden-small"><a href="index.html">IT</a></li>
+            </ul>
+            
+        </div>
+    </div>
+    <!-- end top bar -->
+    <div id="page_content">
+        <div id="page_content_inner">
+            <div class="md-card uk-margin-large-bottom">
+                <div class="md-card-content">
+                    <h3 class="heading_a uk-margin-bottom">Hanu Homepage</h3>
+                    <div class="uk-slidenav-position" data-uk-slider="{autoplay: true,autoplayInterval: '5000'}">
+                        
+                        <div class="uk-slider-container">
+                            <ul class="uk-slider uk-grid uk-grid-small uk-grid-width-medium-1-4 uk-grid-width-small-1-2" style="min-width: 2174.32px; min-height: 128.395px; transform: translateX(-905.966px);">
+                                <li style="max-height: 200px; left: 0px; width: 181.193px;" data-slider-slide="0" class="uk-slide-before"><img src="assets/img/gallery/Image01.jpg" alt="" draggable="false"></li>
+                                <li style="max-height: 200px; left: 181.193px; width: 181.193px;" data-slider-slide="1" class="uk-slide-before"><img src="assets/img/gallery/Image02.jpg" alt="" draggable="false"></li>
+                                <li style="max-height: 200px; left: 362.386px; width: 181.193px;" data-slider-slide="2" class="uk-slide-before"><img src="assets/img/gallery/Image03.jpg" alt="" draggable="false"></li>
+                                <li style="max-height: 200px; left: 543.58px; width: 181.193px;" data-slider-slide="3" class="uk-slide-before"><img src="assets/img/gallery/Image04.jpg" alt="" draggable="false"></li>
+                                <li style="max-height: 200px; left: 724.773px; width: 181.193px;" data-slider-slide="4" class="uk-slide-before"><img src="assets/img/gallery/Image05.jpg" alt="" draggable="false"></li>
+                                <li style="max-height: 200px; left: 905.966px; width: 181.193px;" data-slider-slide="5" class=""><img src="assets/img/gallery/Image06.jpg" alt="" draggable="false"></li>
+                                <li style="max-height: 200px; left: 1087.16px; width: 181.193px;" data-slider-slide="6" class="uk-slide-after"><img src="assets/img/gallery/Image07.jpg" alt="" draggable="false"></li>
+                                <li style="max-height: 200px; left: 1268.35px; width: 181.193px;" data-slider-slide="7" class="uk-slide-after"><img src="assets/img/gallery/Image08.jpg" alt="" draggable="false"></li>
+                                <li style="max-height: 200px; left: 1449.55px; width: 181.193px;" data-slider-slide="8" class="uk-slide-after"><img src="assets/img/gallery/Image09.jpg" alt="" draggable="false"></li>
+                                <li style="max-height: 200px; left: 1630.74px; width: 181.193px;" data-slider-slide="9" class="uk-slide-after"><img src="assets/img/gallery/Image10.jpg" alt="" draggable="false"></li>
+                                <li style="max-height: 200px; left: 1811.93px; width: 181.193px;" data-slider-slide="10" class="uk-slide-after"><img src="assets/img/gallery/Image11.jpg" alt="" draggable="false"></li>
+                                <li style="max-height: 200px; left: 1993.12px; width: 181.193px;" data-slider-slide="11" class="uk-slide-after"><img src="assets/img/gallery/Image12.jpg" alt="" draggable="false"></li>
+                            </ul>
+                        </div>
+                        
+                        <a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slider-item="previous" draggable="false"></a>
+                        <a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slider-item="next" draggable="false"></a>
+                        
                     </div>
-                </nav>
+                </div>
             </div>
-            <div class="header_main_search_form">
-                <i class="md-icon header_main_search_close material-icons">&#xE5CD;</i>
-                <form class="uk-form uk-autocomplete" data-uk-autocomplete="{source:'data/search_data.json'}">
-                    <input type="text" class="header_main_search_input" />
-                    <button class="header_main_search_btn uk-button-link"><i class="md-icon material-icons">&#xE8B6;</i></button>
-                    <script type="text/autocomplete">
-                        <ul class="uk-nav uk-nav-autocomplete uk-autocomplete-results">
-                            {{~items}}
-                            <li data-value="{{ $item.value }}">
-                                <a href="{{ $item.url }}" class="needsclick">
-                                    {{ $item.value }}<br>
-                                    <span class="uk-text-muted uk-text-small">{{{ $item.text }}}</span>
-                                </a>
-                            </li>
-                            {{/items}}
-                            <li data-value="autocomplete-value">
-                                <a class="needsclick">
-                                    Autocomplete Text<br>
-                                    <span class="uk-text-muted uk-text-small">Helper text</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </script>
-                </form>
-            </div>
-        </header><!-- main header end -->
-        <div id="top_bar">
-            <div class="md-top-bar">
-                <ul id="menu_top" class="uk-clearfix">
-                    <li class="uk-hidden-small"><a href="index.html"><i class="material-icons">&#xE88A;</i></a></li>
-                    <li data-uk-dropdown class="uk-hidden-small">
-                        <a href="#" class="md-color-red-600"><i class="material-icons md-color-red-600">&#xE241;</i><span>Multi level</span></a>
-                        <div class="uk-dropdown">
-                            <ul class="uk-nav uk-nav-dropdown uk-nav-multilevel">
-                                <li class="has-submenu">
-                                    <a href="#">Item 1</a>
-                                    <ul>
-                                        <li><a href="#">Item 1.1</a></li>
-                                        <li class="has-submenu">
-                                            <a href="#">Item 1.2</a>
-                                            <ul>
-                                                <li><a href="#">Item 1.2.1</a></li>
-                                                <li><a href="#">Item 1.2.2</a></li>
-                                                <li class="has-submenu">
-                                                    <a href="#">Item 1.2.3</a>
-                                                    <ul>
-                                                        <li><a href="#">Item 1.2.3.1</a></li>
-                                                        <li><a href="#">Item 1.2.3.2</a></li>
-                                                        <li><a href="#">Item 1.2.3.3</a></li>
-                                                        <li><a href="#">Item 1.2.3.4</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">Item 1.2.4</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Item 1.3</a></li>
-                                        <li><a href="#">Item 1.4</a></li>
-                                        <li><a href="#">Item 1.5</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Item 2</a></li>
-                                <li><a href="#">Item 3</a></li>
-                                <li><a href="#">Item 4</a></li>
-                                <li><a href="#">Item 5</a></li>
-                            </ul>
+            
+            <h3 class="heading_b uk-margin-bottom">News</h3>
+            <div class="uk-grid-width-small-1-2 uk-grid-width-medium-1-3 uk-grid-width-large-1-4 uk-margin-large-bottom" data-uk-grid="{gutter: 20}" data-show-delay="280" style="position: relative; margin-left: -20px; height: 616px;">
+                <div class="md-card-content small-padding">
+                    <img src="assets/img/gallery/Image01.jpg" alt="" class="blog_list_teaser_image">
+                    <div class="blog_list_teaser">
+                        <h2 class="blog_list_teaser_title uk-text-truncate"><a href="news_details.html" >Quae dolor ut.</a></h2>
+                        <p>Ut accusantium voluptatem ad et repellat numquam sed voluptas provident numquam molestias necessitatibus et optio dolores pariatur iste omnis sunt temporibus velit.</p>
+                        <span class="uk-text-muted uk-text-small">18.06.2016</span>
+                        <a href="cate_news.html"><span class="uk-badge">Information Technology</span></a>
+                    </div>
+                    <div class="blog_list_footer">
+                        <div class="blog_list_footer_info">
+                            <span class="uk-margin-right"><i class="material-icons"></i> <small>13</small></span>
+                            <span><i class="material-icons"></i> <small>224</small></span>
                         </div>
-                    </li>
-                    <li data-uk-dropdown class="uk-hidden-small">
-                        <a href="#"><i class="material-icons">&#xE8D2;</i><span>Forms</span></a>
-                        <div class="uk-dropdown">
-                            <ul class="uk-nav uk-nav-dropdown">
-                                <li><a href="forms_regular.html">Regular Elements</a></li>
-                                <li><a href="forms_advanced.html">Advanced Elements</a></li>
-                                <li><a href="forms_file_upload.html">File Upload</a></li>
-                                <li><a href="forms_validation.html">Validation</a></li>
-                                <li><a href="forms_wizard.html">Wizard</a></li>
-                                <li class="uk-nav-header">WYSIWYG Editors</li>
-                                <li><a href="forms_wysiwyg_ckeditor.html">CKeditor</a></li>
-                                <li><a href="forms_wysiwyg_tinymce.html">TinyMCE</a></li>
-                            </ul>
+                        <a href="page_blog_article.html" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary uk-float-right">Read more</a>
+                    </div>
+                </div>
+                <div class="md-card-content small-padding">
+                    <img src="assets/img/gallery/Image08.jpg" alt="" class="blog_list_teaser_image">
+                    <div class="blog_list_teaser">
+                        <h2 class="blog_list_teaser_title uk-text-truncate">Eos aspernatur est.</h2> 
+                        <p>Iste iure quia maiores ut optio nulla fugiat qui soluta.</p>
+                        <span class="uk-text-muted uk-text-small">18.06.2016</span>
+                    </div>
+                    <div class="blog_list_footer">
+                        <div class="blog_list_footer_info">
+                            <span class="uk-margin-right"><i class="material-icons"></i> <small>6</small></span>
+                            <span><i class="material-icons"></i> <small>149</small></span>
                         </div>
-                    </li>
-                    <li data-uk-dropdown class="uk-hidden-small">
-                        <a href="#"><i class="material-icons">&#xE87B;</i><span>Components</span></a>
-                        <div class="uk-dropdown uk-dropdown-scrollable">
-                            <ul class="uk-nav uk-nav-dropdown">
-                                <li><a href="components_accordion.html">Accordions</a></li>
-                                <li><a href="components_buttons.html"> Buttons</a></li>
-                                <li><a href="components_cards.html">Cards</a></li>
-                                <li><a href="components_colors.html">Colors</a></li>
-                                <li><a href="components_common.html">Common</a></li>
-                                <li><a href="components_dropdowns.html">Dropdowns</a></li>
-                                <li><a href="components_dynamic_grid.html">Dynamic Grid</a></li>
-                                <li><a href="components_grid.html">Grid</a></li>
-                                <li><a href="components_icons.html">Icons</a></li>
-                                <li><a href="components_modal.html">Lightbox/Modal</a></li>
-                                <li><a href="components_lists.html">Lists</a></li>
-                                <li><a href="components_nestable.html">Nestable</a></li>
-                                <li><a href="components_notifications.html">Notifications</a></li>
-                                <li><a href="components_preloaders.html">Preloaders</a></li>
-                                <li><a href="components_sortable.html">Sortable</a></li>
-                                <li><a href="components_tables.html">Tables</a></li>
-                                <li><a href="components_tables_examples.html">Tables Examples</a></li>
-                                <li><a href="components_tabs.html">Tabs</a></li>
-                                <li><a href="components_tooltips.html">Tooltips</a></li>
-                                <li><a href="components_typography.html">Typography</a></li>
-                            </ul>
+                        <a href="page_blog_article.html" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary uk-float-right">Read more</a>
+                    </div>
+                </div>
+                <div class="md-card-content small-padding">
+                    <img src="assets/img/gallery/Image05.jpg" alt="" class="blog_list_teaser_image">
+                    <div class="blog_list_teaser">
+                        <h2 class="blog_list_teaser_title uk-text-truncate">Saepe reprehenderit excepturi.</h2>
+                        <p>Eligendi eveniet unde dolore corrupti aut et nesciunt vel perspiciatis architecto error impedit nisi ad unde laborum magni ea molestiae magnam quia optio et.</p>
+                        <span class="uk-text-muted uk-text-small">18.06.2016</span>
+                    </div>
+                    <div class="blog_list_footer">
+                        <div class="blog_list_footer_info">
+                            <span class="uk-margin-right"><i class="material-icons"></i> <small>6</small></span>
+                            <span><i class="material-icons"></i> <small>97</small></span>
                         </div>
-                    </li>
-                    <li data-uk-dropdown="justify:'#top_bar'" class="uk-visible-small">
-                        <a href="#"><i class="material-icons">&#xE5D2;</i><span>Mobile</span></a>
-                        <div class="uk-dropdown uk-dropdown-width-2">
-                            <div class="uk-grid uk-dropdown-grid" data-uk-grid-margin>
-                                <div class="uk-width-1-2">
-                                    <ul class="uk-nav uk-nav-dropdown">
-                                        <li class="uk-nav-header">Forms</li>
-                                        <li><a href="forms_regular.html">Regular Elements</a></li>
-                                        <li><a href="forms_advanced.html">Advanced Elements</a></li>
-                                        <li><a href="forms_file_upload.html">File Upload</a></li>
-                                        <li><a href="forms_validation.html">Validation</a></li>
-                                        <li><a href="forms_wizard.html">Wizard</a></li>
-                                        <li class="uk-nav-header">WYSIWYG Editors</li>
-                                        <li><a href="forms_wysiwyg_ckeditor.html">CKeditor</a></li>
-                                        <li><a href="forms_wysiwyg_tinymce.html">TinyMCE</a></li>
-                                    </ul>
-                                </div>
-                                <div class="uk-width-1-2">
-                                    <ul class="uk-nav uk-nav-dropdown">
-                                        <li class="uk-nav-header">Components</li>
-                                        <li><a href="components_accordion.html">Accordions</a></li>
-                                        <li><a href="components_buttons.html"> Buttons</a></li>
-                                        <li><a href="components_cards.html">Cards</a></li>
-                                        <li><a href="components_colors.html">Colors</a></li>
-                                        <li><a href="components_common.html">Common</a></li>
-                                        <li><a href="components_dropdowns.html">Dropdowns</a></li>
-                                        <li><a href="components_dynamic_grid.html">Dynamic Grid</a></li>
-                                        <li><a href="components_grid.html">Grid</a></li>
-                                        <li><a href="components_icons.html">Icons</a></li>
-                                        <li><a href="components_modal.html">Lightbox/Modal</a></li>
-                                        <li><a href="components_lists.html">Lists</a></li>
-                                        <li><a href="components_nestable.html">Nestable</a></li>
-                                        <li><a href="components_notifications.html">Notifications</a></li>
-                                        <li><a href="components_preloaders.html">Preloaders</a></li>
-                                        <li><a href="components_sortable.html">Sortable</a></li>
-                                        <li><a href="components_tables.html">Tables</a></li>
-                                        <li><a href="components_tables_examples.html">Tables Examples</a></li>
-                                        <li><a href="components_tabs.html">Tabs</a></li>
-                                        <li><a href="components_tooltips.html">Tooltips</a></li>
-                                        <li><a href="components_typography.html">Typography</a></li>
-                                    </ul>
-                                </div>
+                        <a href="page_blog_article.html" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary uk-float-right">Read more</a>
+                    </div>
+                </div>>
+                <div>
+                    <div class="md-card">
+                        <div class="md-card-head md-bg-grey-900">
+                            <div class="uk-cover uk-position-relative uk-height-1-1 transform-origin-50" id="video_player" style="opacity: 1; transform: scale(1);">
+                                <iframe width="300" height="150" src="https://www.youtube.com/embed/cbDbT4mK26U" data-uk-cover="" frameborder="0" allowfullscreen="" style="max-height: 100%; width: 374px; height: 187px;"></iframe>
                             </div>
                         </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        
-        <div id="page_content">
-            <div id="page_content_inner">
-                
-                <h3 class="heading_b uk-margin-bottom">Hanu Codee Homepage</h3>
-                <div class="uk-grid-width-small-1-2 uk-grid-width-medium-1-3 uk-grid-width-large-1-4 uk-margin-large-bottom" data-uk-grid="{gutter: 20}" data-show-delay="280" style="position: relative; margin-left: -20px; height: 616px;">
-                    <div data-grid-prepared="true" style="position: absolute; box-sizing: border-box; padding-left: 20px; padding-bottom: 20px; top: 0px; opacity: 1; left: 0px;">
-                        <div class="md-card">
-                            <div class="md-card-content">Blanditiis quia quaerat qui ut eaque labore omnis at velit ex nihil quidem deleniti in impedit porro perferendis eum reiciendis vel.</div>
-                        </div>
-                    </div>
-                    <div data-grid-prepared="true" style="position: absolute; box-sizing: border-box; padding-left: 20px; padding-bottom: 20px; top: 0px; opacity: 1; left: 281.984px;">
-                        <div class="md-card">
-                            <div class="md-card-content">Iusto repellat quia porro et nihil quos adipisci rem non et autem eum libero eius est molestiae ut rem eum repudiandae saepe delectus nobis molestiae.</div>
-                        </div>
-                    </div>
-                    <div data-grid-prepared="true" style="position: absolute; box-sizing: border-box; padding-left: 20px; padding-bottom: 20px; top: 0px; opacity: 1; left: 563.969px;">
-                        <div class="md-card">
-                            <div class="md-card-content">Perspiciatis nihil omnis ut ducimus minus libero voluptatem et cupiditate doloremque voluptatem omnis iste occaecati sequi inventore repellat soluta dolorem sequi repellendus illum quae et tempora a nihil esse voluptatum omnis odio vel culpa autem ea ut dolorem inventore eligendi.</div>
-                        </div>
-                    </div>
-                    <div data-grid-prepared="true" style="position: absolute; box-sizing: border-box; padding-left: 20px; padding-bottom: 20px; top: 132px; opacity: 1; left: 0px;">
-                        <div class="md-card">
-                            <div class="md-card-content">Et est ipsam aliquid dolor eius assumenda sequi iste ea impedit eius suscipit deleniti officia ea voluptate minima voluptatum iure molestias excepturi nihil aut autem et qui perferendis.</div>
-                        </div>
-                    </div>
-                    <div data-grid-prepared="true" style="position: absolute; box-sizing: border-box; padding-left: 20px; padding-bottom: 20px; top: 152px; opacity: 1; left: 281.984px;">
-                        <div class="md-card">
-                            <div class="md-card-content">Dolore reiciendis similique qui autem id tempore culpa illo quod mollitia dolor velit animi qui aliquam reprehenderit corporis aut.</div>
-                        </div>
-                    </div>
-                    <div data-grid-prepared="true" style="position: absolute; box-sizing: border-box; padding-left: 20px; padding-bottom: 20px; top: 232px; opacity: 1; left: 563.969px;">
-                        <div class="md-card">
-                            <div class="md-card-content">Qui voluptatem voluptas quo assumenda et quidem quia velit sit cum est rem corporis alias assumenda dicta consequatur vero recusandae amet consequatur repudiandae dolore earum est dicta voluptas necessitatibus architecto mollitia consequatur laboriosam et blanditiis totam.</div>
-                        </div>
-                    </div>
-                    <div data-grid-prepared="true" style="position: absolute; box-sizing: border-box; padding-left: 20px; padding-bottom: 20px; top: 304px; opacity: 1; left: 0px;">
-                        <div class="md-card">
-                            <div class="md-card-content">Ullam odio ipsum quos maiores veniam sunt et vero et nemo veritatis odio ut laudantium vitae cum placeat debitis facere odio fuga totam suscipit blanditiis quis ut tempora quisquam quis accusantium animi omnis voluptatem provident dolores provident.</div>
-                        </div>
-                    </div>
-                    <div data-grid-prepared="true" style="position: absolute; box-sizing: border-box; padding-left: 20px; padding-bottom: 20px; top: 284px; opacity: 1; left: 281.984px;">
-                        <div class="md-card">
-                            <div class="md-card-content">Iste ipsa tempora ab minus molestiae non ab sed qui quas accusamus sequi aut ab reprehenderit in facilis nisi.</div>
-                        </div>
-                    </div>
-                    <div data-grid-prepared="true" style="position: absolute; box-sizing: border-box; padding-left: 20px; padding-bottom: 20px; top: 464px; opacity: 1; left: 563.969px;">
-                        <div class="md-card">
-                            <div class="md-card-content">Accusamus et accusantium non consequuntur quia consectetur hic quia repudiandae et itaque fuga sint sapiente ut aut repellendus temporibus corporis aut sit provident cumque.</div>
+                        <div class="md-card-content" style="min-height: 209px;">
+                            <ul class="md-list md-list-addon md-list-interactive" id="video_player_playlist">
+                                <li data-video-src="-CYs99M7hzA" class="md-list-item-active">
+                                    <div class="md-list-addon-element">
+                                        <i class="md-list-addon-icon material-icons"></i>
+                                    </div>
+                                    <div class="md-list-content">
+                                        <span class="md-list-heading">Unboxing the HERO4</span>
+                                        <span class="uk-text-small uk-text-muted">Mashable</span>
+                                    </div>
+                                </li>
+                                <li data-video-src="te689fEo2pY">
+                                    <div class="md-list-addon-element">
+                                        <i class="md-list-addon-icon material-icons"></i>
+                                    </div>
+                                    <div class="md-list-content">
+                                        <span class="md-list-heading">Apple Watch Unboxing &amp; Setup</span>
+                                        <span class="uk-text-small uk-text-muted">Unbox Therapy</span>
+                                    </div>
+                                </li>
+                                <li data-video-src="7AFJeaYojhU">
+                                    <div class="md-list-addon-element">
+                                        <i class="md-list-addon-icon material-icons"></i>
+                                    </div>
+                                    <div class="md-list-content">
+                                        <span class="md-list-heading">Energous WattUp Power Transmitter</span>
+                                        <span class="uk-text-small uk-text-muted">TechCrunch</span>
+                                    </div>
+                                </li>
+                                <li data-video-src="hajnEpCq5SE">
+                                    <div class="md-list-addon-element">
+                                        <i class="md-list-addon-icon material-icons"></i>
+                                    </div>
+                                    <div class="md-list-content">
+                                        <span class="md-list-heading">The new MacBook - Design</span>
+                                        <span class="uk-text-small uk-text-muted">Apple</span>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <hr>
-                <div class="uk-width-medium-2-5">
+                <div class="md-card">
+                    <div class="md-card-content small-padding">
+                        <img src="assets/img/gallery/Image10.jpg" alt="" class="blog_list_teaser_image">
+                        <div class="blog_list_teaser">
+                            <h2 class="blog_list_teaser_title uk-text-truncate">Delectus amet et.</h2>
+                            <p>Recusandae blanditiis quibusdam pariatur non non consequuntur aut qui tempora in totam vero non ea distinctio odit nostrum ut non molestiae harum et.</p>
+                            <span class="uk-text-muted uk-text-small">18.06.2016</span>
+                        </div>
+                        <div class="blog_list_footer">
+                            <div class="blog_list_footer_info">
+                                <span class="uk-margin-right"><i class="material-icons"></i> <small>11</small></span>
+                                <span><i class="material-icons"></i> <small>183</small></span>
+                            </div>
+                            <a href="page_blog_article.html" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary uk-float-right">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="md-card-content small-padding">
+                    <img src="assets/img/gallery/Image04.jpg" alt="" class="blog_list_teaser_image">
+                    <div class="blog_list_teaser">
+                        <h2 class="blog_list_teaser_title uk-text-truncate">Quam esse.</h2>
+                        <p>Ipsum et corrupti eaque tempore natus fugit eos nisi quisquam recusandae sit maxime.</p>
+                        <span class="uk-text-muted uk-text-small">18.06.2016</span>
+                    </div>
+                    <div class="blog_list_footer">
+                        <div class="blog_list_footer_info">
+                            <span class="uk-margin-right"><i class="material-icons"></i> <small>23</small></span>
+                            <span><i class="material-icons"></i> <small>128</small></span>
+                        </div>
+                        <a href="page_blog_article.html" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary uk-float-right">Read more</a>
+                    </div>
+                </div>
+                <div class="md-card-content small-padding">
+                    <img src="assets/img/gallery/Image09.jpg" alt="" class="blog_list_teaser_image">
+                    <div class="blog_list_teaser">
+                        <h2 class="blog_list_teaser_title uk-text-truncate">Praesentium ipsa.</h2>
+                        <p>Consectetur esse cupiditate et et omnis architecto cumque assumenda quia quas quia et eum laboriosam nesciunt laborum labore non occaecati et numquam beatae.</p>
+                        <span class="uk-text-muted uk-text-small">18.06.2016</span>
+                    </div>
+                    <div class="blog_list_footer">
+                        <div class="blog_list_footer_info">
+                            <span class="uk-margin-right"><i class="material-icons"></i> <small>27</small></span>
+                            <span><i class="material-icons"></i> <small>66</small></span>
+                        </div>
+                        <a href="page_blog_article.html" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary uk-float-right">Read more</a>
+                    </div>
+                </div>                  
+            </div>
+            <ul class="uk-pagination">
+                <li class="uk-disabled"><span><i class="uk-icon-angle-double-left"></i></span></li>
+                <li class="uk-active"><span>1</span></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><span>…</span></li>
+                <li><a href="#">20</a></li>
+                <li><a href="#"><i class="uk-icon-angle-double-right"></i></a></li>
+            </ul>
+            <hr>
+            <div class="uk-grid uk-grid-medium" data-uk-grid-margin="" data-uk-grid-match="{target:'.md-card'}">
+                <div class="uk-width-medium-2-3 uk-row-first">
+                    <div class="md-card" style="min-height: 164px;">
+                        <div class="md-card-content">
+                                <h3 class="heading_a uk-margin-bottom">Textual Slider</h3>
+                                <div class="uk-slidenav-position" data-uk-slider="">                           
+                                    <div class="uk-slider-container">
+                                        <ul class="uk-slider uk-grid uk-grid-medium uk-grid-width-medium-1-3 uk-grid-width-small-1-2" style="min-width: 3668.58px; min-height: 283.333px; transform: translateX(3301.72px);">
+                                            <li data-slider-slide="0" style="left: -3668.58px; width: 366.858px;" class="uk-slide-before">
+                                                Atque quam modi dignissimos dolorem omnis quis itaque et iure consectetur qui totam totam reprehenderit et optio quis aut error magni occaecati optio vero incidunt mollitia laudantium sapiente voluptate accusamus molestiae ut sed quia cum autem odio sint quibusdam voluptatem et quia veniam assumenda nam nobis in incidunt rem repudiandae iusto tempora sed corrupti at dolorem ut et perspiciatis beatae nemo doloremque facilis ut quo explicabo laborum quo eveniet ut molestiae neque ut veritatis aut nobis sunt nam necessitatibus dolorum est aliquid mollitia quisquam natus ea animi qui nobis.       
+                                            </li>
+                                            <li data-slider-slide="1" class="" style="left: -3301.72px; width: 366.858px;">
+                                                Et velit sed est exercitationem culpa occaecati dolores est laborum eum nihil optio perspiciatis pariatur hic consectetur quaerat aliquam nobis fugiat modi itaque quas ducimus vero nostrum esse dolorem aut ut impedit qui sit recusandae aspernatur ipsam aperiam deserunt sint et incidunt delectus dolor eligendi ut maiores ratione atque sint rem consequatur molestiae voluptatem occaecati rerum.        
+                                            </li>
+                                            <li data-slider-slide="2" class="uk-slide-after" style="left: -2934.86px; width: 366.858px;">
+                                                Autem at nihil doloribus esse sunt magnam repellat qui magni officia sit sed eveniet quis natus quia quis reiciendis dolor in suscipit expedita ducimus eaque veritatis numquam commodi voluptates reprehenderit autem quas voluptatibus eaque qui id quibusdam vel qui nostrum temporibus consequatur quae explicabo totam eum fuga aliquid accusantium culpa iusto ullam deleniti tempore enim beatae aut pariatur autem sed sapiente consequuntur dolor et minus nihil natus qui repudiandae placeat in dolorem aut consequatur culpa unde dolore facilis aliquid consectetur provident optio et a nostrum quasi quas aut cum aut dolorem perspiciatis aliquam nihil ut voluptas neque ullam ex voluptatem quae dicta praesentium ducimus qui magni esse pariatur velit.                
+                                            </li>
+                                            <li data-slider-slide="3" class="uk-slide-after" style="left: -2568px; width: 366.858px;">
+                                                Atque sit aut repudiandae repellat qui et nihil exercitationem fuga qui animi possimus dolores quae occaecati tempora minus labore sed ut quos quia corporis ea expedita nobis dicta vero reiciendis ipsa omnis nisi necessitatibus accusamus aut ipsa sit aut ratione deserunt possimus saepe ipsa occaecati eveniet vero ducimus quaerat et consequatur nisi voluptate fuga suscipit fugit consequatur ad voluptas facere voluptatem officiis molestias dolorem et non quis voluptas dolores ad ducimus autem nobis et eum eos deleniti soluta dignissimos dolores aut alias omnis eaque nihil in sunt sunt ut delectus ut facilis odio sed eaque repellat tempore consequatur nam modi quas.                     
+                                            </li>
+                                            <li data-slider-slide="4" class="uk-slide-after" style="left: -2201.15px; width: 366.858px;">
+                                                <div class="md-card">
+                                                    <div class="md-card-content small-padding">
+                                                        <img src="assets/img/gallery/Image03.jpg" alt="" class="blog_list_teaser_image">
+                                                        <div class="blog_list_teaser">
+                                                            <h2 class="blog_list_teaser_title uk-text-truncate">Vitae repudiandae.</h2>
+                                                            <p>Consequatur et numquam ipsam et iusto quia sint ullam officiis mollitia nihil voluptatum possimus cum molestias voluptatem eum aut in.</p>
+                                                            <span class="uk-text-muted uk-text-small">18.06.2016</span>
+                                                        </div>
+                                                        <div class="blog_list_footer">
+                                                            <div class="blog_list_footer_info">
+                                                                <span class="uk-margin-right"><i class="material-icons"></i> <small>22</small></span>
+                                                                <span><i class="material-icons"></i> <small>274</small></span>
+                                                            </div>
+                                                            <a href="page_blog_article.html" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary uk-float-right">Read more</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li data-slider-slide="5" class="uk-slide-after" style="left: -1834.29px; width: 366.858px;">
+                                                Maxime necessitatibus saepe doloremque voluptas accusantium velit dolorem tempore aut modi deserunt minima nemo culpa et necessitatibus quod atque rerum et sint quam temporibus ipsa culpa dolorem at voluptatem et at maiores architecto eligendi rerum eveniet non repellendus culpa asperiores enim rerum et exercitationem eum quos debitis laboriosam dolor illum aut saepe inventore sed laudantium quis omnis sed eligendi consequatur vel sunt perferendis itaque incidunt dolorem fuga quisquam autem distinctio labore ut quia recusandae neque ut molestiae commodi in molestias delectus laborum sed dolorem quas modi voluptate veritatis nobis quidem adipisci nobis nesciunt.                             
+                                            </li>
+                                            <li data-slider-slide="6" class="uk-slide-after" style="left: -1467.43px; width: 366.858px;">
+                                                Architecto reiciendis voluptatibus temporibus nulla dolore consectetur incidunt distinctio fuga ea nulla tempore harum est amet itaque culpa voluptatem et ad rerum sequi reprehenderit assumenda eum accusantium ut et cumque molestiae saepe sint accusantium eum itaque dolores nesciunt incidunt deleniti in doloremque eos quasi autem labore ut voluptates consequatur et numquam molestiae sit perferendis et deserunt adipisci quia vero recusandae iusto animi et beatae necessitatibus optio qui distinctio.                            
+                                            </li>
+                                            <li data-slider-slide="7" class="uk-slide-after" style="left: -1100.57px; width: 366.858px;">
+                                                Commodi accusamus quod provident harum ut ipsa ut quibusdam corporis qui magnam et numquam unde consequatur praesentium dolorem dolorem et voluptatem necessitatibus iure nesciunt ea aperiam itaque nulla dolor et aut perferendis cum eveniet dolor doloremque rerum velit minima aut possimus et alias minus tempora tempore est aut sed similique autem non porro omnis sit aliquam eveniet omnis illum omnis labore accusamus et et non enim eum ipsa architecto dolor ducimus architecto qui consequuntur soluta a expedita non.                         
+                                            </li>
+                                            <li data-slider-slide="8" class="uk-slide-after" style="left: -733.715px; width: 366.858px;">
+                                                Quam id assumenda voluptas aperiam dolorum commodi soluta est sint qui eos rerum id blanditiis deserunt repudiandae culpa et sit commodi similique molestiae rem et assumenda consequuntur soluta suscipit totam similique voluptatem mollitia pariatur est eius excepturi est excepturi aut numquam maiores ut quae eius in neque vel ullam.                           
+                                            </li>
+                                            <li data-slider-slide="9" class="uk-slide-before" style="left: -4035.43px; width: 366.858px;">
+                                                Commodi provident laudantium quia tempore ipsum officiis quos quia dignissimos asperiores quidem natus vitae harum corrupti magni consequatur et consequatur ut suscipit dolor natus soluta quas expedita saepe aut totam rerum voluptatem omnis itaque et molestias rerum perspiciatis fugiat ut sunt in omnis aut sit voluptates omnis ut pariatur est natus aut autem a ut laboriosam nostrum quasi deleniti porro illum rerum.                      
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <a href="#" class="uk-slidenav uk-slidenav-previous" data-uk-slider-item="previous" draggable="false"></a>
+                                    <a href="#" class="uk-slidenav uk-slidenav-next" data-uk-slider-item="next" draggable="false"></a>
+                                    
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-medium-1-3">
+                    <div class="md-card" style="min-height: 164px;">
+                        <div class="md-card-content">
+                                Assumenda explicabo ut est assumenda nihil repudiandae voluptatem perspiciatis provident possimus reprehenderit dolor omnis ratione magnam at dolor modi illo ab et enim temporibus autem dolorem odit qui id aut quia cum eum hic veniam facilis error et.
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-medium-3-6">
                     <table>
                         <thead>
                             <tr>
@@ -317,11 +400,12 @@
                                         </div>
                                     </div>
                                 </td>
+                                <td>
+                                    
+                                </td>
                             </tr>
                         </tbody>
-                    </table>
-                    
-                    
+                    </table>    
                 </div>
             </div>
         </div>
@@ -599,7 +683,7 @@
             });
         </script>
         <footer id="footer">
-                © 2019 <a href="#">Hanu Codee</a>, All rights reserved.
+            © 2019 <a href="#">Hanu Codee</a>, All rights reserved.
         </footer>
     </body>
     
