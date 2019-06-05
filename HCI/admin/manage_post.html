@@ -57,16 +57,15 @@
                     <a href="#" id="sidebar_main_toggle" class="sSwitch sSwitch_left">
                         <span class="sSwitchIcon"></span>
                     </a>
-                    
                     <div class="uk-navbar-flip">
                         <ul class="uk-navbar-nav user_actions">
                             <li><a href="#" id="main_search_btn" class="user_action_icon"><i class="material-icons md-24 md-light">&#xE8B6;</i></a></li>
                             <li data-uk-dropdown="{mode:'click',pos:'bottom-right'}">
-                                <a href="#" class="user_action_image"><img class="md-user-image" src="../assets/img/avatars/avatar_11_tn.png" alt=""/></a>
+                                <a href="#" class="user_action_image"><img class="md-user-image" src="../assets/img/avatars/avatar_11.png" alt=""/></a>
                                 <div class="uk-dropdown uk-dropdown-small">
                                     <ul class="uk-nav js-uk-prevent">
-                                        <li><a href="info_user.html"><i class="uk-icon-user"></i> My profile</a></li>
-                                        <li><a href="../index.html"><i class="uk-icon-sign-out"></i> Log out</a></li>
+                                        <li><a href="info_user.html">My profile</a></li>
+                                        <li><a href="../index.html">Log out</a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -123,7 +122,7 @@
             
             <div class="menu_section">
                 <ul>
-                    <li class="current_section" title="Dashboard">
+                    <li title="Dashboard">
                         <a href="index.html">
                             <span class="menu_icon"><i class="material-icons">&#xE871;</i></span>
                             <span class="menu_title">Dashboard</span>
@@ -133,29 +132,182 @@
                     <li title="User Profile">
                         <a href="manage_user.html">
                             <span class="menu_icon"><i class="material-icons">&#xE87C;</i></span>
-                            <span class="menu_title">Manage Users</span>
+                            <span class="menu_title">Manage User</span>
                         </a>                        
-                    </li>   
-                    <li title="Manage post" class="submenu_trigger">
+                    </li>  
+                    <li class="current_section" title="Manage post" class="submenu_trigger">
                         <a href="#">
                             <span class="menu_icon"><i class="material-icons"></i></span>
                             <span class="menu_title">Manage Posts</span>
                         </a>
-                        <ul class="" style="display: none;">
-                            <li><a href="manage_post.html">List of Posts</a></li>
+                        <ul class="" >
+                            <li class="act_item"><a href="manage_post.html">List of Posts</a></li>
                             <li><a href="deleted_post.html">Deleted Posts</a></li>
                         </ul>      
-                    </li>        
+                    </li>                        
                 </ul>
             </div>
         </aside><!-- main sidebar end -->
         
         <div id="page_content">
             <div id="page_content_inner">
-                
-                <h3>Welcome to admin home page!</h3>
-                <hr>
-                
+                <h1>Posts manage</h1>
+                <div class="md-card uk-margin-medium-bottom">
+                    
+                    <div class="md-card-content">
+                        <div class="uk-width-medium-1-5">
+                            <a class="md-btn md-btn-primary md-btn-medium md-btn-wave-light md-btn-icon" href="add_post.html">
+                                <i class="uk-icon-plus"></i>
+                                Add new Post
+                            </a>
+                        </div>
+                        <br>
+                        <div class="uk-overflow-container">
+                            <table class="uk-table uk-table-hover">
+                                <thead>
+                                    <tr>
+                                        <th><b>Title</b></th>
+                                        <th>Category</th>
+                                        <th>Description</th>
+                                        <th>Author</th>
+                                        <th>Image</th>
+                                        <th>Created_at</th>
+                                        <th>Updated_at</th>
+                                        <th>Publication</th>
+                                        <th style="text-align: center;">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Table Data</td>
+                                        <td>Table Data</td>
+                                        <td>Table Data</td>
+                                        <td>Table Data</td>
+                                        <td>Table Data</td>
+                                        <td>Table Data</td>
+                                        <td>Table Data</td>
+                                        <td align="center">
+                                            <div>
+                                                <input type="checkbox" data-switchery checked id="settings_site_online" name="settings_site_online" />
+                                            </div>
+                                        </td>
+                                        <td align="center">
+                                            <a class="md-btn md-btn-success md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" href="../news_details.html">
+                                                <i class="uk-icon-eye"></i>
+                                            </a>&nbsp;
+                                            <a class="md-btn md-btn-primary md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" href="edit_post.html">
+                                                <i class="uk-icon-pencil"></i>
+                                            </a>&nbsp;
+                                            <button type="button" class="md-btn md-btn-danger md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" onclick="UIkit.modal.confirm('Are you sure want to delete this post?', function(){ UIkit.modal.alert('Deleted!'); });"><i class="uk-icon-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Table Data</td>
+                                        <td>Table Data</td>
+                                        <td>Table Data</td>
+                                        <td>Table Data</td>
+                                        <td>Table Data</td>
+                                        <td>Table Data</td>
+                                        <td>Table Data</td>
+                                        <td align="center">
+                                            <div>
+                                                <input type="checkbox" data-switchery checked id="settings_site_online" name="settings_site_online" />
+                                            </div>
+                                        </td>
+                                        <td align="center">
+                                            <a class="md-btn md-btn-success md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" href="../news_details.html">
+                                                <i class="uk-icon-eye"></i>
+                                            </a>&nbsp;
+                                            <a class="md-btn md-btn-primary md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" href="edit_post.html">
+                                                <i class="uk-icon-pencil"></i>
+                                            </a>&nbsp;
+                                            <button type="button" class="md-btn md-btn-danger md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" onclick="UIkit.modal.confirm('Are you sure want to delete this post?', function(){ UIkit.modal.alert('Deleted!'); });"><i class="uk-icon-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Table Data</td>
+                                        <td>Table Data</td>
+                                        <td>Table Data</td>
+                                        <td>Table Data</td>
+                                        <td>Table Data</td>
+                                        <td>Table Data</td>
+                                        <td>Table Data</td>
+                                        <td align="center">
+                                            <div>
+                                                <input type="checkbox" data-switchery checked id="settings_site_online" name="settings_site_online" />
+                                            </div>
+                                        </td>
+                                        <td align="center">
+                                            <a class="md-btn md-btn-success md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" href="../news_details.html">
+                                                <i class="uk-icon-eye"></i>
+                                            </a>&nbsp;
+                                            <a class="md-btn md-btn-primary md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" href="edit_post.html">
+                                                <i class="uk-icon-pencil"></i>
+                                            </a>&nbsp;
+                                            <button type="button" class="md-btn md-btn-danger md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" onclick="UIkit.modal.confirm('Are you sure want to delete this post?', function(){ UIkit.modal.alert('Deleted!'); });"><i class="uk-icon-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Table Data</td>
+                                        <td>Table Data</td>
+                                        <td>Table Data</td>
+                                        <td>Table Data</td>
+                                        <td>Table Data</td>
+                                        <td>Table Data</td>
+                                        <td>Table Data</td>
+                                        <td align="center">
+                                            <div>
+                                                <input type="checkbox" data-switchery checked id="settings_site_online" name="settings_site_online" />
+                                            </div>
+                                        </td>
+                                        <td align="center">
+                                            <a class="md-btn md-btn-success md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" href="../news_details.html">
+                                                <i class="uk-icon-eye"></i>
+                                            </a>&nbsp;
+                                            <a class="md-btn md-btn-primary md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" href="edit_post.html">
+                                                <i class="uk-icon-pencil"></i>
+                                            </a>&nbsp;
+                                            <button type="button" class="md-btn md-btn-danger md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" onclick="UIkit.modal.confirm('Are you sure want to delete this post?', function(){ UIkit.modal.alert('Deleted!'); });"><i class="uk-icon-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Table Data</td>
+                                        <td>Table Data</td>
+                                        <td>Table Data</td>
+                                        <td>Table Data</td>
+                                        <td>Table Data</td>
+                                        <td>Table Data</td>
+                                        <td>Table Data</td>
+                                        <td align="center">
+                                            <div>
+                                                <input type="checkbox" data-switchery checked id="settings_site_online" name="settings_site_online" />
+                                            </div>
+                                        </td>
+                                        <td align="center">
+                                            <a class="md-btn md-btn-success md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" href="../news_details.html">
+                                                <i class="uk-icon-eye"></i>
+                                            </a>&nbsp;
+                                            <a class="md-btn md-btn-primary md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" href="edit_post.html">
+                                                <i class="uk-icon-pencil"></i>
+                                            </a>&nbsp;
+                                            <button type="button" class="md-btn md-btn-danger md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" onclick="UIkit.modal.confirm('Are you sure want to delete this post?', function(){ UIkit.modal.alert('Deleted!'); });"><i class="uk-icon-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>   
+                            </table>
+                            <ul class="uk-pagination">
+                                <li class="uk-disabled"><span><i class="uk-icon-angle-double-left"></i></span></li>
+                                <li class="uk-active"><span>1</span></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><span>…</span></li>
+                                <li><a href="#">20</a></li>
+                                <li><a href="#"><i class="uk-icon-angle-double-right"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         
