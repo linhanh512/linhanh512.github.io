@@ -1,0 +1,1004 @@
+<!doctype html>
+<!--[if lte IE 9]> <html class="lte-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en"> <!--<![endif]-->
+
+
+<!-- Mirrored from altair_html.tzdthemes.com/page_user_profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Jul 2018 15:37:08 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Remove Tap Highlight on Windows Phone IE -->
+    <meta name="msapplication-tap-highlight" content="no"/>
+    
+    <link rel="icon" type="image/png" href="assets/img/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png" sizes="32x32">
+    
+    <title>Altair Admin v2.20.0</title>
+    
+    
+    <!-- uikit -->
+    <link rel="stylesheet" href="bower_components/uikit/css/uikit.almost-flat.min.css" media="all">
+    
+    <!-- flag icons -->
+    <link rel="stylesheet" href="assets/icons/flags/flags.min.css" media="all">
+    
+    <!-- style switcher -->
+    <link rel="stylesheet" href="assets/css/style_switcher.min.css" media="all">
+    
+    <!-- altair admin -->
+    <link rel="stylesheet" href="assets/css/main.min.css" media="all">
+    
+    <!-- themes -->
+    <link rel="stylesheet" href="assets/css/themes/themes_combined.min.css" media="all">
+    
+    <!-- matchMedia polyfill for testing media queries in JS -->
+    <!--[if lte IE 9]>
+        <script type="text/javascript" src="bower_components/matchMedia/matchMedia.js"></script>
+        <script type="text/javascript" src="bower_components/matchMedia/matchMedia.addListener.js"></script>
+        <link rel="stylesheet" href="assets/css/ie.css" media="all">
+        <![endif]-->
+        
+    </head>
+    <body >
+        <!-- main header -->
+        
+        <header id="header_main">
+            <div class="header_main_content">
+                <nav class="uk-navbar">
+                    <div class="main_logo_top">
+                        <a href="index_login.html"><img src="assets/img/LogoHCI1.png" alt="" height="50" width="160"/></a>
+                    </div>
+                    
+                    <!-- secondary sidebar switch -->
+                    <a href="#" id="sidebar_secondary_toggle" class="sSwitch sSwitch_right sidebar_secondary_check">
+                        <span class="sSwitchIcon"></span>
+                    </a>
+                    
+                    <div class="uk-navbar-flip">
+                        <ul class="uk-navbar-nav user_actions">
+                            <!-- <li><a href="#" id="main_search_btn" class="user_action_icon"><i class="material-icons md-24 md-light">&#xE8B6;</i></a></li> -->
+                            <li data-uk-dropdown="{mode:'click',pos:'bottom-right'}" aria-haspopup="true" aria-expanded="false" class="">
+                                <a href="#" class="user_action_image"><img class="md-user-image" src="assets/img/avatars/avatar_11_tn.png" alt=""></a>
+                                <div class="uk-dropdown uk-dropdown-small uk-dropdown-bottom" aria-hidden="true" tabindex="" style="min-width: 160px; top: 47px; left: -44px;">
+                                    <ul class="uk-nav js-uk-prevent">
+                                        <li><a href="info_user.html"><i class="uk-icon-user"></i> My profile</a></li>
+                                        <li><a href="index.html"><i class="uk-icon-sign-out"></i> Log out</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>                     
+                    </div>
+                </nav>
+            </div>
+            <div class="header_main_search_form">
+                <i class="md-icon header_main_search_close material-icons">&#xE5CD;</i>
+                <form class="uk-form uk-autocomplete" data-uk-autocomplete="{source:'data/search_data.json'}">
+                    <input type="text" class="header_main_search_input" />
+                    <button class="header_main_search_btn uk-button-link"><i class="md-icon material-icons">&#xE8B6;</i></button>
+                    <script type="text/autocomplete">
+                        <ul class="uk-nav uk-nav-autocomplete uk-autocomplete-results">
+                            {{~items}}
+                            <li data-value="{{ $item.value }}">
+                                <a href="{{ $item.url }}" class="needsclick">
+                                    {{ $item.value }}<br>
+                                    <span class="uk-text-muted uk-text-small">{{{ $item.text }}}</span>
+                                </a>
+                            </li>
+                            {{/items}}
+                            <li data-value="autocomplete-value">
+                                <a class="needsclick">
+                                    Autocomplete Text<br>
+                                    <span class="uk-text-muted uk-text-small">Helper text</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </script>
+                </form>
+            </div>
+        </header> <!-- main header end -->
+        <!-- main header end -->
+        <!-- top bar -->
+        
+        <!-- end top bar -->
+        
+        <div id="page_content">
+            <div id="page_content_inner">
+                <div class="uk-grid" data-uk-grid-margin data-uk-grid-match id="user_profile">
+                    <div class="uk-width-large-2-10">
+                        
+                    </div>
+                    <div class="uk-width-large-6-10">
+                        <div class="md-card">
+                            <div class="user_heading">
+                                <h2 style="text-align: center; color: springgreen">Your Profile</h2>
+                                
+                                <div class="user_heading_avatar">
+                                    <div class="thumbnail">
+                                        <img src="assets/img/avatars/avatar_11.png" alt="user avatar"/>
+                                    </div>
+                                </div>
+                                <div class="user_heading_content">
+                                    <h2 class="heading_b uk-margin-bottom"><span class="uk-text-truncate">Lavina Hayes</span><span class="sub-heading">Land acquisition specialist</span></h2>
+                                    <ul class="user_stats">
+                                        <li>
+                                            <h4 class="heading_a">30 <span class="sub-heading">Posts</span></h4>
+                                        </li>
+                                        <li>
+                                            <h4 class="heading_a">120 <span class="sub-heading">Photos</span></h4>
+                                        </li>
+                                        <li>
+                                            <h4 class="heading_a">100 <span class="sub-heading">Following</span></h4>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a class="md-fab md-fab-small md-fab-accent hidden-print" >
+                                    <i class="material-icons">&#xE150;</i>
+                                </a>
+                            </div>
+                            <div class="user_content">
+                                <ul id="user_profile_tabs" class="uk-tab" data-uk-tab="{connect:'#user_profile_tabs_content', animation:'slide-horizontal'}" data-uk-sticky="{ top: 48, media: 960 }">
+                                    <li class="uk-active"><a href="#">About</a></li>
+                                    <li><a href="#">Photos</a></li>
+                                    <li><a href="#">Posts</a></li>
+                                </ul>
+                                <ul id="user_profile_tabs_content" class="uk-switcher uk-margin">
+                                    <li>
+                                        Vel sit est eum sit quaerat dolor autem dolorem culpa fugiat voluptatem magni doloribus consequatur voluptates qui aspernatur nobis officia veniam provident dignissimos aut velit nihil fugit pariatur ratione odio recusandae eum quo est ut expedita consequatur doloremque nostrum adipisci tenetur est incidunt rerum quo fugit et pariatur recusandae ut ratione suscipit inventore culpa deserunt molestiae dolorem nihil maiores aspernatur consectetur et consequatur repellat est et eligendi rerum tempore aliquid adipisci fugiat eveniet ut.                                    <div class="uk-grid uk-margin-medium-top uk-margin-large-bottom" data-uk-grid-margin>
+                                            <div class="uk-width-large-1-2">
+                                                <h4 class="heading_c uk-margin-small-bottom">Contact Info</h4>
+                                                <ul class="md-list md-list-addon">
+                                                    <li>
+                                                        <div class="md-list-addon-element">
+                                                            <i class="md-list-addon-icon material-icons">&#xE158;</i>
+                                                        </div>
+                                                        <div class="md-list-content">
+                                                            <span class="md-list-heading"><a href="cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="5b3228293a3e3763691b2c2e3528383375383436">[email&#160;protected]</a></span>
+                                                            <span class="uk-text-small uk-text-muted">Email</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="md-list-addon-element">
+                                                            <i class="md-list-addon-icon material-icons">&#xE0CD;</i>
+                                                        </div>
+                                                        <div class="md-list-content">
+                                                            <span class="md-list-heading">(446)206-4427x7872</span>
+                                                            <span class="uk-text-small uk-text-muted">Phone</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="md-list-addon-element">
+                                                            <i class="md-list-addon-icon uk-icon-facebook-official"></i>
+                                                        </div>
+                                                        <div class="md-list-content">
+                                                            <span class="md-list-heading">facebook.com/envato</span>
+                                                            <span class="uk-text-small uk-text-muted">Facebook</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="md-list-addon-element">
+                                                            <i class="md-list-addon-icon uk-icon-twitter"></i>
+                                                        </div>
+                                                        <div class="md-list-content">
+                                                            <span class="md-list-heading">twitter.com/envato</span>
+                                                            <span class="uk-text-small uk-text-muted">Twitter</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="uk-width-large-1-2">
+                                                <h4 class="heading_c uk-margin-small-bottom">My groups</h4>
+                                                <ul class="md-list">
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="md-list-heading"><a href="#">Cloud Computing</a></span>
+                                                            <span class="uk-text-small uk-text-muted">22 Members</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="md-list-heading"><a href="#">Account Manager Group</a></span>
+                                                            <span class="uk-text-small uk-text-muted">135 Members</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="md-list-heading"><a href="#">Digital Marketing</a></span>
+                                                            <span class="uk-text-small uk-text-muted">279 Members</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="md-list-content">
+                                                            <span class="md-list-heading"><a href="#">HR Professionals Association - Human Resources</a></span>
+                                                            <span class="uk-text-small uk-text-muted">157 Members</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <h4 class="heading_c uk-margin-bottom">Timeline</h4>
+                                        <div class="timeline">
+                                            <div class="timeline_item">
+                                                <div class="timeline_icon timeline_icon_success"><i class="material-icons">&#xE85D;</i></div>
+                                                <div class="timeline_date">
+                                                    09 <span>Jun</span>
+                                                </div>
+                                                <div class="timeline_content">Created ticket <a href="#"><strong>#3289</strong></a></div>
+                                            </div>
+                                            <div class="timeline_item">
+                                                <div class="timeline_icon timeline_icon_danger"><i class="material-icons">&#xE5CD;</i></div>
+                                                <div class="timeline_date">
+                                                    15 <span>Jun</span>
+                                                </div>
+                                                <div class="timeline_content">Deleted post <a href="#"><strong>Unde dolores voluptatem sequi odio nostrum impedit.</strong></a></div>
+                                            </div>
+                                            <div class="timeline_item">
+                                                <div class="timeline_icon"><i class="material-icons">&#xE410;</i></div>
+                                                <div class="timeline_date">
+                                                    19 <span>Jun</span>
+                                                </div>
+                                                <div class="timeline_content">
+                                                    Added photo
+                                                    <div class="timeline_content_addon">
+                                                        <img src="assets/img/gallery/Image16.jpg" alt=""/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="timeline_item">
+                                                <div class="timeline_icon timeline_icon_primary"><i class="material-icons">&#xE0B9;</i></div>
+                                                <div class="timeline_date">
+                                                    21 <span>Jun</span>
+                                                </div>
+                                                <div class="timeline_content">
+                                                    New comment on post <a href="#"><strong>Quod a tempora accusantium accusantium.</strong></a>
+                                                    <div class="timeline_content_addon">
+                                                        <blockquote>
+                                                            Quia voluptatum dolore suscipit cupiditate culpa nemo quam ut a fuga aut delectus consequatur et aut quas natus nihil natus eos quo.&hellip;
+                                                        </blockquote>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="timeline_item">
+                                                <div class="timeline_icon timeline_icon_warning"><i class="material-icons">&#xE7FE;</i></div>
+                                                <div class="timeline_date">
+                                                    29 <span>Jun</span>
+                                                </div>
+                                                <div class="timeline_content">
+                                                    Added to Friends
+                                                    <div class="timeline_content_addon">
+                                                        <ul class="md-list md-list-addon">
+                                                            <li>
+                                                                <div class="md-list-addon-element">
+                                                                    <img class="md-user-image md-list-addon-avatar" src="assets/img/avatars/avatar_02_tn.png" alt=""/>
+                                                                </div>
+                                                                <div class="md-list-content">
+                                                                    <span class="md-list-heading">Burdette Rolfson</span>
+                                                                    <span class="uk-text-small uk-text-muted">Et consequatur molestias fugit nisi.</span>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div id="user_profile_gallery" data-uk-check-display class="uk-grid-width-small-1-2 uk-grid-width-medium-1-3 uk-grid-width-large-1-4" data-uk-grid="{gutter: 4}">
+                                            <div>
+                                                <a href="assets/img/gallery/Image01.jpg" data-uk-lightbox="{group:'user-photos'}">
+                                                    <img src="assets/img/gallery/Image01.jpg" alt=""/>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="assets/img/gallery/Image02.jpg" data-uk-lightbox="{group:'user-photos'}">
+                                                    <img src="assets/img/gallery/Image02.jpg" alt=""/>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="assets/img/gallery/Image03.jpg" data-uk-lightbox="{group:'user-photos'}">
+                                                    <img src="assets/img/gallery/Image03.jpg" alt=""/>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="assets/img/gallery/Image04.jpg" data-uk-lightbox="{group:'user-photos'}">
+                                                    <img src="assets/img/gallery/Image04.jpg" alt=""/>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="assets/img/gallery/Image05.jpg" data-uk-lightbox="{group:'user-photos'}">
+                                                    <img src="assets/img/gallery/Image05.jpg" alt=""/>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="assets/img/gallery/Image06.jpg" data-uk-lightbox="{group:'user-photos'}">
+                                                    <img src="assets/img/gallery/Image06.jpg" alt=""/>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="assets/img/gallery/Image07.jpg" data-uk-lightbox="{group:'user-photos'}">
+                                                    <img src="assets/img/gallery/Image07.jpg" alt=""/>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="assets/img/gallery/Image08.jpg" data-uk-lightbox="{group:'user-photos'}">
+                                                    <img src="assets/img/gallery/Image08.jpg" alt=""/>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="assets/img/gallery/Image09.jpg" data-uk-lightbox="{group:'user-photos'}">
+                                                    <img src="assets/img/gallery/Image09.jpg" alt=""/>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="assets/img/gallery/Image10.jpg" data-uk-lightbox="{group:'user-photos'}">
+                                                    <img src="assets/img/gallery/Image10.jpg" alt=""/>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="assets/img/gallery/Image11.jpg" data-uk-lightbox="{group:'user-photos'}">
+                                                    <img src="assets/img/gallery/Image11.jpg" alt=""/>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="assets/img/gallery/Image12.jpg" data-uk-lightbox="{group:'user-photos'}">
+                                                    <img src="assets/img/gallery/Image12.jpg" alt=""/>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="assets/img/gallery/Image13.jpg" data-uk-lightbox="{group:'user-photos'}">
+                                                    <img src="assets/img/gallery/Image13.jpg" alt=""/>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="assets/img/gallery/Image14.jpg" data-uk-lightbox="{group:'user-photos'}">
+                                                    <img src="assets/img/gallery/Image14.jpg" alt=""/>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="assets/img/gallery/Image15.jpg" data-uk-lightbox="{group:'user-photos'}">
+                                                    <img src="assets/img/gallery/Image15.jpg" alt=""/>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="assets/img/gallery/Image16.jpg" data-uk-lightbox="{group:'user-photos'}">
+                                                    <img src="assets/img/gallery/Image16.jpg" alt=""/>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="assets/img/gallery/Image17.jpg" data-uk-lightbox="{group:'user-photos'}">
+                                                    <img src="assets/img/gallery/Image17.jpg" alt=""/>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="assets/img/gallery/Image18.jpg" data-uk-lightbox="{group:'user-photos'}">
+                                                    <img src="assets/img/gallery/Image18.jpg" alt=""/>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="assets/img/gallery/Image19.jpg" data-uk-lightbox="{group:'user-photos'}">
+                                                    <img src="assets/img/gallery/Image19.jpg" alt=""/>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="assets/img/gallery/Image20.jpg" data-uk-lightbox="{group:'user-photos'}">
+                                                    <img src="assets/img/gallery/Image20.jpg" alt=""/>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="assets/img/gallery/Image21.jpg" data-uk-lightbox="{group:'user-photos'}">
+                                                    <img src="assets/img/gallery/Image21.jpg" alt=""/>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="assets/img/gallery/Image22.jpg" data-uk-lightbox="{group:'user-photos'}">
+                                                    <img src="assets/img/gallery/Image22.jpg" alt=""/>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="assets/img/gallery/Image23.jpg" data-uk-lightbox="{group:'user-photos'}">
+                                                    <img src="assets/img/gallery/Image23.jpg" alt=""/>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="assets/img/gallery/Image24.jpg" data-uk-lightbox="{group:'user-photos'}">
+                                                    <img src="assets/img/gallery/Image24.jpg" alt=""/>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <ul class="uk-pagination uk-margin-large-top">
+                                            <li class="uk-disabled"><span><i class="uk-icon-angle-double-left"></i></span></li>
+                                            <li class="uk-active"><span>1</span></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><span>&hellip;</span></li>
+                                            <li><a href="#">20</a></li>
+                                            <li><a href="#"><i class="uk-icon-angle-double-right"></i></a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul class="md-list">
+                                            <li>
+                                                <div class="md-list-content">
+                                                    <span class="md-list-heading"><a href="#">Praesentium rerum at qui culpa.</a></span>
+                                                    <div class="uk-margin-small-top">
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE192;</i> <span class="uk-text-muted uk-text-small">21 Jun 2018</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE0B9;</i> <span class="uk-text-muted uk-text-small">23</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE417;</i> <span class="uk-text-muted uk-text-small">244</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="md-list-content">
+                                                    <span class="md-list-heading"><a href="#">Qui repellendus est aut temporibus ex occaecati.</a></span>
+                                                    <div class="uk-margin-small-top">
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE192;</i> <span class="uk-text-muted uk-text-small">03 Jun 2018</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE0B9;</i> <span class="uk-text-muted uk-text-small">15</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE417;</i> <span class="uk-text-muted uk-text-small">291</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="md-list-content">
+                                                    <span class="md-list-heading"><a href="#">Eum ab ut ut ipsam et.</a></span>
+                                                    <div class="uk-margin-small-top">
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE192;</i> <span class="uk-text-muted uk-text-small">08 Jun 2018</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE0B9;</i> <span class="uk-text-muted uk-text-small">5</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE417;</i> <span class="uk-text-muted uk-text-small">453</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="md-list-content">
+                                                    <span class="md-list-heading"><a href="#">Quia quos et error ut.</a></span>
+                                                    <div class="uk-margin-small-top">
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE192;</i> <span class="uk-text-muted uk-text-small">07 Jun 2018</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE0B9;</i> <span class="uk-text-muted uk-text-small">19</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE417;</i> <span class="uk-text-muted uk-text-small">174</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="md-list-content">
+                                                    <span class="md-list-heading"><a href="#">Repellat totam quas aut blanditiis.</a></span>
+                                                    <div class="uk-margin-small-top">
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE192;</i> <span class="uk-text-muted uk-text-small">19 Jun 2018</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE0B9;</i> <span class="uk-text-muted uk-text-small">6</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE417;</i> <span class="uk-text-muted uk-text-small">359</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="md-list-content">
+                                                    <span class="md-list-heading"><a href="#">Provident labore soluta doloremque non ut rerum qui.</a></span>
+                                                    <div class="uk-margin-small-top">
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE192;</i> <span class="uk-text-muted uk-text-small">03 Jun 2018</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE0B9;</i> <span class="uk-text-muted uk-text-small">23</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE417;</i> <span class="uk-text-muted uk-text-small">891</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="md-list-content">
+                                                    <span class="md-list-heading"><a href="#">Alias illo ut id non.</a></span>
+                                                    <div class="uk-margin-small-top">
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE192;</i> <span class="uk-text-muted uk-text-small">11 Jun 2018</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE0B9;</i> <span class="uk-text-muted uk-text-small">7</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE417;</i> <span class="uk-text-muted uk-text-small">213</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="md-list-content">
+                                                    <span class="md-list-heading"><a href="#">Magni odit et cupiditate in libero consequatur ut.</a></span>
+                                                    <div class="uk-margin-small-top">
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE192;</i> <span class="uk-text-muted uk-text-small">20 Jun 2018</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE0B9;</i> <span class="uk-text-muted uk-text-small">11</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE417;</i> <span class="uk-text-muted uk-text-small">199</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="md-list-content">
+                                                    <span class="md-list-heading"><a href="#">Exercitationem est reprehenderit sed nesciunt sed est.</a></span>
+                                                    <div class="uk-margin-small-top">
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE192;</i> <span class="uk-text-muted uk-text-small">19 Jun 2018</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE0B9;</i> <span class="uk-text-muted uk-text-small">4</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE417;</i> <span class="uk-text-muted uk-text-small">288</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="md-list-content">
+                                                    <span class="md-list-heading"><a href="#">Nesciunt fugit recusandae sint earum repellat asperiores eos.</a></span>
+                                                    <div class="uk-margin-small-top">
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE192;</i> <span class="uk-text-muted uk-text-small">20 Jun 2018</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE0B9;</i> <span class="uk-text-muted uk-text-small">16</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE417;</i> <span class="uk-text-muted uk-text-small">222</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="md-list-content">
+                                                    <span class="md-list-heading"><a href="#">Aliquam saepe et consectetur minima.</a></span>
+                                                    <div class="uk-margin-small-top">
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE192;</i> <span class="uk-text-muted uk-text-small">06 Jun 2018</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE0B9;</i> <span class="uk-text-muted uk-text-small">7</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE417;</i> <span class="uk-text-muted uk-text-small">942</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="md-list-content">
+                                                    <span class="md-list-heading"><a href="#">Esse voluptas ea fugiat ratione et.</a></span>
+                                                    <div class="uk-margin-small-top">
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE192;</i> <span class="uk-text-muted uk-text-small">11 Jun 2018</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE0B9;</i> <span class="uk-text-muted uk-text-small">9</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE417;</i> <span class="uk-text-muted uk-text-small">512</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="md-list-content">
+                                                    <span class="md-list-heading"><a href="#">Non velit sit doloribus est.</a></span>
+                                                    <div class="uk-margin-small-top">
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE192;</i> <span class="uk-text-muted uk-text-small">17 Jun 2018</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE0B9;</i> <span class="uk-text-muted uk-text-small">16</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE417;</i> <span class="uk-text-muted uk-text-small">670</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="md-list-content">
+                                                    <span class="md-list-heading"><a href="#">Sunt quibusdam omnis eos sint et.</a></span>
+                                                    <div class="uk-margin-small-top">
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE192;</i> <span class="uk-text-muted uk-text-small">28 Jun 2018</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE0B9;</i> <span class="uk-text-muted uk-text-small">21</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE417;</i> <span class="uk-text-muted uk-text-small">372</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="md-list-content">
+                                                    <span class="md-list-heading"><a href="#">Repellat et nostrum ut.</a></span>
+                                                    <div class="uk-margin-small-top">
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE192;</i> <span class="uk-text-muted uk-text-small">02 Jun 2018</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE0B9;</i> <span class="uk-text-muted uk-text-small">11</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE417;</i> <span class="uk-text-muted uk-text-small">548</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="md-list-content">
+                                                    <span class="md-list-heading"><a href="#">Ad labore eius incidunt quia aut adipisci.</a></span>
+                                                    <div class="uk-margin-small-top">
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE192;</i> <span class="uk-text-muted uk-text-small">10 Jun 2018</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE0B9;</i> <span class="uk-text-muted uk-text-small">12</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE417;</i> <span class="uk-text-muted uk-text-small">367</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="md-list-content">
+                                                    <span class="md-list-heading"><a href="#">Aliquam sapiente inventore est et.</a></span>
+                                                    <div class="uk-margin-small-top">
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE192;</i> <span class="uk-text-muted uk-text-small">07 Jun 2018</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE0B9;</i> <span class="uk-text-muted uk-text-small">22</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE417;</i> <span class="uk-text-muted uk-text-small">560</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="md-list-content">
+                                                    <span class="md-list-heading"><a href="#">Reprehenderit deleniti dolor quae delectus aliquid et est.</a></span>
+                                                    <div class="uk-margin-small-top">
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE192;</i> <span class="uk-text-muted uk-text-small">10 Jun 2018</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE0B9;</i> <span class="uk-text-muted uk-text-small">12</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE417;</i> <span class="uk-text-muted uk-text-small">908</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="md-list-content">
+                                                    <span class="md-list-heading"><a href="#">Ut amet debitis quos qui amet porro nam.</a></span>
+                                                    <div class="uk-margin-small-top">
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE192;</i> <span class="uk-text-muted uk-text-small">13 Jun 2018</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE0B9;</i> <span class="uk-text-muted uk-text-small">1</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE417;</i> <span class="uk-text-muted uk-text-small">114</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="md-list-content">
+                                                    <span class="md-list-heading"><a href="#">Omnis dolores officia maxime et qui.</a></span>
+                                                    <div class="uk-margin-small-top">
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE192;</i> <span class="uk-text-muted uk-text-small">19 Jun 2018</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE0B9;</i> <span class="uk-text-muted uk-text-small">19</span>
+                                                        </span>
+                                                        <span class="uk-margin-right">
+                                                            <i class="material-icons">&#xE417;</i> <span class="uk-text-muted uk-text-small">610</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-width-large-2-10">
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <!-- google web fonts -->
+            <script data-cfasync="false" src="cdn-cgi/scripts/f2bf09f8/cloudflare-static/email-decode.min.js"></script><script>
+                WebFontConfig = {
+                    google: {
+                        families: [
+                        'Source+Code+Pro:400,700:latin',
+                        'Roboto:400,300,500,700,400italic:latin'
+                        ]
+                    }
+                };
+                (function() {
+                    var wf = document.createElement('script');
+                    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+                    '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+                    wf.type = 'text/javascript';
+                    wf.async = 'true';
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(wf, s);
+                })();
+            </script>
+            
+            <!-- common functions -->
+            <script src="assets/js/common.min.js"></script>
+            <!-- uikit functions -->
+            <script src="assets/js/uikit_custom.min.js"></script>
+            <!-- altair common functions/helpers -->
+            <script src="assets/js/altair_admin_common.min.js"></script>
+            
+            
+            <script>
+                $(function() {
+                    if(isHighDensity()) {
+                        $.getScript( "assets/js/custom/dense.min.js", function(data) {
+                            // enable hires images
+                            altair_helpers.retina_images();
+                        });
+                    }
+                    if(Modernizr.touch) {
+                        // fastClick (touch devices)
+                        FastClick.attach(document.body);
+                    }
+                });
+                $window.load(function() {
+                    // ie fixes
+                    altair_helpers.ie_fix();
+                });
+            </script>
+            
+            <script>
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+                ga('create', 'UA-65191727-1', 'auto');
+                ga('send', 'pageview');
+            </script>
+            
+            <div id="style_switcher">
+                <div id="style_switcher_toggle"><i class="material-icons">&#xE8B8;</i></div>
+                <div class="uk-margin-medium-bottom">
+                    <h4 class="heading_c uk-margin-bottom">Colors</h4>
+                    <ul class="switcher_app_themes" id="theme_switcher">
+                        <li class="app_style_default active_theme" data-app-theme="">
+                            <span class="app_color_main"></span>
+                            <span class="app_color_accent"></span>
+                        </li>
+                        <li class="switcher_theme_a" data-app-theme="app_theme_a">
+                            <span class="app_color_main"></span>
+                            <span class="app_color_accent"></span>
+                        </li>
+                        <li class="switcher_theme_b" data-app-theme="app_theme_b">
+                            <span class="app_color_main"></span>
+                            <span class="app_color_accent"></span>
+                        </li>
+                        <li class="switcher_theme_c" data-app-theme="app_theme_c">
+                            <span class="app_color_main"></span>
+                            <span class="app_color_accent"></span>
+                        </li>
+                        <li class="switcher_theme_d" data-app-theme="app_theme_d">
+                            <span class="app_color_main"></span>
+                            <span class="app_color_accent"></span>
+                        </li>
+                        <li class="switcher_theme_e" data-app-theme="app_theme_e">
+                            <span class="app_color_main"></span>
+                            <span class="app_color_accent"></span>
+                        </li>
+                        <li class="switcher_theme_f" data-app-theme="app_theme_f">
+                            <span class="app_color_main"></span>
+                            <span class="app_color_accent"></span>
+                        </li>
+                        <li class="switcher_theme_g" data-app-theme="app_theme_g">
+                            <span class="app_color_main"></span>
+                            <span class="app_color_accent"></span>
+                        </li>
+                        <li class="switcher_theme_h" data-app-theme="app_theme_h">
+                            <span class="app_color_main"></span>
+                            <span class="app_color_accent"></span>
+                        </li>
+                        <li class="switcher_theme_i" data-app-theme="app_theme_i">
+                            <span class="app_color_main"></span>
+                            <span class="app_color_accent"></span>
+                        </li>
+                        <li class="switcher_theme_dark" data-app-theme="app_theme_dark">
+                            <span class="app_color_main"></span>
+                            <span class="app_color_accent"></span>
+                        </li>
+                    </ul>
+                </div>
+               
+            </div>
+            
+            <script>
+                $(function() {
+                    var $switcher = $('#style_switcher'),
+                    $switcher_toggle = $('#style_switcher_toggle'),
+                    $theme_switcher = $('#theme_switcher'),
+                    $mini_sidebar_toggle = $('#style_sidebar_mini'),
+                    $slim_sidebar_toggle = $('#style_sidebar_slim'),
+                    $boxed_layout_toggle = $('#style_layout_boxed'),
+                    $accordion_mode_toggle = $('#accordion_mode_main_menu'),
+                    $html = $('html'),
+                    $body = $('body');
+                    
+                    
+                    $switcher_toggle.click(function(e) {
+                        e.preventDefault();
+                        $switcher.toggleClass('switcher_active');
+                    });
+                    
+                    $theme_switcher.children('li').click(function(e) {
+                        e.preventDefault();
+                        var $this = $(this),
+                        this_theme = $this.attr('data-app-theme');
+                        
+                        $theme_switcher.children('li').removeClass('active_theme');
+                        $(this).addClass('active_theme');
+                        $html
+                        .removeClass('app_theme_a app_theme_b app_theme_c app_theme_d app_theme_e app_theme_f app_theme_g app_theme_h app_theme_i app_theme_dark')
+                        .addClass(this_theme);
+                        
+                        if(this_theme == '') {
+                            localStorage.removeItem('altair_theme');
+                            $('#kendoCSS').attr('href','bower_components/kendo-ui/styles/kendo.material.min.css');
+                        } else {
+                            localStorage.setItem("altair_theme", this_theme);
+                            if(this_theme == 'app_theme_dark') {
+                                $('#kendoCSS').attr('href','bower_components/kendo-ui/styles/kendo.materialblack.min.css')
+                            } else {
+                                $('#kendoCSS').attr('href','bower_components/kendo-ui/styles/kendo.material.min.css');
+                            }
+                        }
+                        
+                    });
+                    
+                    // hide style switcher
+                    $document.on('click keyup', function(e) {
+                        if( $switcher.hasClass('switcher_active') ) {
+                            if (
+                            ( !$(e.target).closest($switcher).length )
+                            || ( e.keyCode == 27 )
+                            ) {
+                                $switcher.removeClass('switcher_active');
+                            }
+                        }
+                    });
+                    
+                    // get theme from local storage
+                    if(localStorage.getItem("altair_theme") !== null) {
+                        $theme_switcher.children('li[data-app-theme='+localStorage.getItem("altair_theme")+']').click();
+                    }
+                    
+                    
+                    // toggle mini sidebar
+                    
+                    // change input's state to checked if mini sidebar is active
+                    if((localStorage.getItem("altair_sidebar_mini") !== null && localStorage.getItem("altair_sidebar_mini") == '1') || $body.hasClass('sidebar_mini')) {
+                        $mini_sidebar_toggle.iCheck('check');
+                    }
+                    
+                    $mini_sidebar_toggle
+                    .on('ifChecked', function(event){
+                        $switcher.removeClass('switcher_active');
+                        localStorage.setItem("altair_sidebar_mini", '1');
+                        localStorage.removeItem('altair_sidebar_slim');
+                        location.reload(true);
+                    })
+                    .on('ifUnchecked', function(event){
+                        $switcher.removeClass('switcher_active');
+                        localStorage.removeItem('altair_sidebar_mini');
+                        location.reload(true);
+                    });
+                    
+                    // toggle slim sidebar
+                    
+                    // change input's state to checked if mini sidebar is active
+                    if((localStorage.getItem("altair_sidebar_slim") !== null && localStorage.getItem("altair_sidebar_slim") == '1') || $body.hasClass('sidebar_slim')) {
+                        $slim_sidebar_toggle.iCheck('check');
+                    }
+                    
+                    $slim_sidebar_toggle
+                    .on('ifChecked', function(event){
+                        $switcher.removeClass('switcher_active');
+                        localStorage.setItem("altair_sidebar_slim", '1');
+                        localStorage.removeItem('altair_sidebar_mini');
+                        location.reload(true);
+                    })
+                    .on('ifUnchecked', function(event){
+                        $switcher.removeClass('switcher_active');
+                        localStorage.removeItem('altair_sidebar_slim');
+                        location.reload(true);
+                    });
+                    
+                    // toggle boxed layout
+                    
+                    if((localStorage.getItem("altair_layout") !== null && localStorage.getItem("altair_layout") == 'boxed') || $body.hasClass('boxed_layout')) {
+                        $boxed_layout_toggle.iCheck('check');
+                        $body.addClass('boxed_layout');
+                        $(window).resize();
+                    }
+                    
+                    $boxed_layout_toggle
+                    .on('ifChecked', function(event){
+                        $switcher.removeClass('switcher_active');
+                        localStorage.setItem("altair_layout", 'boxed');
+                        location.reload(true);
+                    })
+                    .on('ifUnchecked', function(event){
+                        $switcher.removeClass('switcher_active');
+                        localStorage.removeItem('altair_layout');
+                        location.reload(true);
+                    });
+                    
+                    // main menu accordion mode
+                    if($sidebar_main.hasClass('accordion_mode')) {
+                        $accordion_mode_toggle.iCheck('check');
+                    }
+                    
+                    $accordion_mode_toggle
+                    .on('ifChecked', function(){
+                        $sidebar_main.addClass('accordion_mode');
+                    })
+                    .on('ifUnchecked', function(){
+                        $sidebar_main.removeClass('accordion_mode');
+                    });
+                    
+                    
+                });
+            </script>
+        </body>
+        
+        <!-- Mirrored from altair_html.tzdthemes.com/page_user_profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Jul 2018 15:37:08 GMT -->
+        </html>
