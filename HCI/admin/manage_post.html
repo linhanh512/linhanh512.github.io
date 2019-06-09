@@ -50,7 +50,7 @@
                     <ul class="uk-navbar-nav user_actions">
                         <li><a href="#" id="main_search_btn" class="user_action_icon"><i class="material-icons md-24 md-light">&#xE8B6;</i></a></li>
                         <li data-uk-dropdown="{mode:'click',pos:'bottom-right'}">
-                            <a href="#" class="user_action_image"><img class="md-user-image" src="../assets/img/avatars/avatar_02.png" alt=""/></a>
+                            <a href="#" class="user_action_image"><img class="md-user-image" src="../assets/img/avatars/avatar_11.png" alt=""/></a>
                             <div class="uk-dropdown uk-dropdown-small">
                                 <ul class="uk-nav js-uk-prevent">
                                     <li><a href="info_user.html">My profile</a></li>
@@ -94,7 +94,7 @@
         <div class="sidebar_main_header">
             <div class="sidebar_logo">
                 <a href="index.html" class="sSidebar_hide sidebar_logo_large">
-                    <img class="logo_regular" src="../assets/img/logo_main.png" alt="" height="15" width="71"/>
+                    <img class="logo_regular" src="../assets/img/logo_main.png" alt="" height="50" width="160"/>
                     <img class="logo_light" src="../assets/img/logo_main_white.png" alt="" height="15" width="71"/>
                 </a>
                 <a href="index.html" class="sSidebar_show sidebar_logo_small">
@@ -158,7 +158,7 @@
     
     <div id="page_content">
         <div id="page_content_inner">
-            <h1>Posts manage</h1>
+            <h2 style="text-align: center">Posts Management</h2>
             <div class="md-card uk-margin-medium-bottom">
                 
                 <div class="md-card-content">
@@ -174,14 +174,14 @@
                             <thead>
                                 <tr>
                                     <th><b>Title</b></th>
-                                    <th>Category</th>
-                                    <th>Description</th>
-                                    <th>Author</th>
-                                    <th>Image</th>
-                                    <th>Created_at</th>
-                                    <th>Updated_at</th>
-                                    <th>Publication</th>
-                                    <th style="text-align: center;">Actions</th>
+                                    <th><b>Category</b></th>
+                                    <th><b>Description</b></th>
+                                    <th><b>Author</b></th>
+                                    <th><b>Image</b></th>
+                                    <th><b>Created_at</b></th>
+                                    <th><b>Updated_at</b></th>
+                                    <th><b>Publication</b></th>
+                                    <th style="text-align: center;"><b>Actions</b></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -199,13 +199,13 @@
                                         </div>
                                     </td>
                                     <td align="center">
-                                        <a class="md-btn md-btn-success md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" href="../news_details.html">
+                                        <a class="md-btn md-btn-success md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" href="news_details_admin.html">
                                             <i class="uk-icon-eye"></i>
                                         </a>&nbsp;
                                         <a class="md-btn md-btn-primary md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" href="edit_post.html">
                                             <i class="uk-icon-pencil"></i>
                                         </a>&nbsp;
-                                        <button type="button" class="md-btn md-btn-danger md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" onclick="UIkit.modal.confirm('Are you sure want to delete this post?', function(){ UIkit.modal.alert('Deleted!'); });"><i class="uk-icon-trash"></i></button>
+                                        <button type="button" class="md-btn md-btn-danger md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" onclick="UIkit.modal.confirm('Are you sure want to delete this post?', function(){ UIkit.modal.alert('Delete this post successfully!'); });"><i class="uk-icon-trash"></i></button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -222,13 +222,13 @@
                                         </div>
                                     </td>
                                     <td align="center">
-                                        <a class="md-btn md-btn-success md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" href="../news_details.html">
+                                        <a class="md-btn md-btn-success md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" href="news_details_admin.html">
                                             <i class="uk-icon-eye"></i>
                                         </a>&nbsp;
                                         <a class="md-btn md-btn-primary md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" href="edit_post.html">
                                             <i class="uk-icon-pencil"></i>
                                         </a>&nbsp;
-                                        <button type="button" class="md-btn md-btn-danger md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" onclick="UIkit.modal.confirm('Are you sure want to delete this post?', function(){ UIkit.modal.alert('Deleted!'); });"><i class="uk-icon-trash"></i></button>
+                                        <button type="button" class="md-btn md-btn-danger md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" onclick="UIkit.modal.confirm('Are you sure want to delete this post?', function(){ UIkit.modal.alert('Delete this post successfully!'); });"><i class="uk-icon-trash"></i></button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -245,13 +245,13 @@
                                         </div>
                                     </td>
                                     <td align="center">
-                                        <a class="md-btn md-btn-success md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" href="../news_details.html">
+                                        <a class="md-btn md-btn-success md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" href="news_details_admin.html">
                                             <i class="uk-icon-eye"></i>
                                         </a>&nbsp;
                                         <a class="md-btn md-btn-primary md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" href="edit_post.html">
                                             <i class="uk-icon-pencil"></i>
                                         </a>&nbsp;
-                                        <button type="button" class="md-btn md-btn-danger md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" onclick="UIkit.modal.confirm('Are you sure want to delete this post?', function(){ UIkit.modal.alert('Deleted!'); });"><i class="uk-icon-trash"></i></button>
+                                        <button type="button" class="md-btn md-btn-danger md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" onclick="UIkit.modal.confirm('Are you sure want to delete this post?', function(){ UIkit.modal.alert('Delete this post successfully!'); });"><i class="uk-icon-trash"></i></button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -268,13 +268,13 @@
                                         </div>
                                     </td>
                                     <td align="center">
-                                        <a class="md-btn md-btn-success md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" href="../news_details.html">
+                                        <a class="md-btn md-btn-success md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" href="news_details_admin.html">
                                             <i class="uk-icon-eye"></i>
                                         </a>&nbsp;
                                         <a class="md-btn md-btn-primary md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" href="edit_post.html">
                                             <i class="uk-icon-pencil"></i>
                                         </a>&nbsp;
-                                        <button type="button" class="md-btn md-btn-danger md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" onclick="UIkit.modal.confirm('Are you sure want to delete this post?', function(){ UIkit.modal.alert('Deleted!'); });"><i class="uk-icon-trash"></i></button>
+                                        <button type="button" class="md-btn md-btn-danger md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" onclick="UIkit.modal.confirm('Are you sure want to delete this post?', function(){ UIkit.modal.alert('Delete this post successfully!'); });"><i class="uk-icon-trash"></i></button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -291,13 +291,13 @@
                                         </div>
                                     </td>
                                     <td align="center">
-                                        <a class="md-btn md-btn-success md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" href="../news_details.html">
+                                        <a class="md-btn md-btn-success md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" href="news_details_admin.html">
                                             <i class="uk-icon-eye"></i>
                                         </a>&nbsp;
                                         <a class="md-btn md-btn-primary md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" href="edit_post.html">
                                             <i class="uk-icon-pencil"></i>
                                         </a>&nbsp;
-                                        <button type="button" class="md-btn md-btn-danger md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" onclick="UIkit.modal.confirm('Are you sure want to delete this post?', function(){ UIkit.modal.alert('Deleted!'); });"><i class="uk-icon-trash"></i></button>
+                                        <button type="button" class="md-btn md-btn-danger md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" onclick="UIkit.modal.confirm('Are you sure want to delete this post?', function(){ UIkit.modal.alert('Delete this post successfully!'); });"><i class="uk-icon-trash"></i></button>
                                     </td>
                                 </tr>
                             </tbody>   
