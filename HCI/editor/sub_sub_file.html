@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" href="../assets/img/favicon-16x16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="../assets/img/favicon-32x32.png" sizes="32x32">
     
-    <title>Altair Admin v2.20.0</title>
+    <title>Hanu Codee</title>
     
     <!-- additional styles for plugins -->
     <!-- weather icons -->
@@ -36,12 +36,14 @@
     <link rel="stylesheet" href="../assets/css/themes/themes_combined.min.css" media="all">
     <!-- dropify -->
     <link rel="stylesheet" href="../assets/skins/dropify/css/dropify.css">
+    
 </head>
 <body class="disable_transitions sidebar_main_open sidebar_main_swipe">
     <!-- main header -->
     <header id="header_main">
         <div class="header_main_content">
             <nav class="uk-navbar">
+                
                 <!-- main sidebar switch -->
                 <a href="#" id="sidebar_main_toggle" class="sSwitch sSwitch_left">
                     <span class="sSwitchIcon"></span>
@@ -90,6 +92,7 @@
     </header><!-- main header end -->
     <!-- main sidebar -->
     <aside id="sidebar_main">
+        
         <div class="sidebar_main_header">
             <div class="sidebar_logo">
                 <a href="index.html" class="sSidebar_hide sidebar_logo_large">
@@ -107,6 +110,7 @@
                 </select>
             </div>
         </div>
+        
         <div class="menu_section">
             <ul>
                 <li title="Dashboard">
@@ -114,6 +118,7 @@
                         <span class="menu_icon"><i class="material-icons">&#xE871;</i></span>
                         <span class="menu_title">Dashboard</span>
                     </a>
+                    
                 </li>                                                                           
                 <li title="Manage users">
                     <a href="manage_user.html">
@@ -160,12 +165,13 @@
                 <div class="md-card-content">
                     <ul id="breadcrumbs">
                         <li><a href="manage_file.html">Folder A</a></li>
+                        <li><a href="sub_file.html">Sub_folder</a></li>
                     </ul>
                     <hr>
                 </div>
                 <div class="md-card-content uk-grid">
                     <div class="uk-width-1-4">
-                        <button type="button" class="md-btn md-btn-primary md-btn-medium md-btn-wave-light md-btn-icon" onclick="UIkit.modal.prompt('Folder Name:', '', function(val){ if(val==''){UIkit.modal.alert('File name must not be null!');}else{ UIkit.modal.alert('Create '+(val)+' in [Folder A/] successfully!');} });">
+                        <button type="button" class="md-btn md-btn-primary md-btn-medium md-btn-wave-light md-btn-icon" onclick="UIkit.modal.prompt('Folder Name:', '', function(val){ if(val==''){UIkit.modal.alert('File name must not be null!');}else{ UIkit.modal.alert('Create '+(val)+' in [Folder A/Sub_folder/] successfully!');} });">
                             <i class="uk-icon-plus"></i>
                             Create new Folder
                         </button> 
@@ -204,7 +210,7 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        <a href="sub_sub_file.html"><i class="uk-icon-folder uk-icon-medium"></i> Sub_folder</a>
+                                        <a href="sub_sub_file.html"><i class="uk-icon-file-word-o uk-icon-medium"></i> doc.docx</a>
                                     </td>
                                     <td>
                                         11/05/2019
@@ -216,32 +222,59 @@
                                         900 KB
                                     </td>
                                     <td align="center">
-                                        <button class="md-btn md-btn-success md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" data-uk-modal="{target:'#modal_overflow'}"><i class="uk-icon-eye"></i></button>&nbsp;
+                                        <button class="md-btn md-btn-success md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" data-uk-modal="{target:'#modal_overflow'}"><i class="uk-icon-eye"></i></button>&nbsp; &nbsp;
                                         <div id="modal_overflow" class="uk-modal">
                                             <div class="uk-modal-dialog">
                                                 <button type="button" class="uk-modal-close uk-close"></button>
-                                                <h2 class="heading_d">Sub_folder Overview </h2>
+                                                <h2 class="heading_d">doc.docx </h2>
                                                 <hr>
-                                                <table>
-                                                    <tr>
-                                                        <td>
-                                                            <a class="md-btn md-btn-flat disabled" href="javascript:void(0)"><i class="uk-icon-file-word-o uk-icon-medium"></i> doc.docx</a>
-                                                        </td>
-                                                        
-                                                    </tr>
-                                                </table>
+                                                <p>
+                                                    some text here
+                                                </p>
                                                 
                                             </div>
                                         </div>
                                         <button type="button" class="md-btn md-btn-primary md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" onclick="UIkit.modal.prompt('Edit File Name:', 'old file name', function(val){ if(val==''){UIkit.modal.alert('File name must not be null!');}else{ UIkit.modal.alert('Edit file name successfully!');} });">
-                                            <i class="uk-icon-pencil"></i>  
-                                        </button>                                        
+                                            <i class="uk-icon-pencil"></i>
+                                        </button> 
                                         <button type="button" class="md-btn md-btn-danger md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" onclick="UIkit.modal.confirm('Are you sure want to delete this File?', function(){ UIkit.modal.alert('Deleted!'); });"><i class="uk-icon-trash"></i></button>
                                     </td>
                                 </tr>
+                                <tr>
+                                        <td>
+                                            <a href="sub_sub_file.html"><i class="uk-icon-file-word-o uk-icon-medium"></i> doc.docx</a>
+                                        </td>
+                                        <td>
+                                            11/05/2019
+                                        </td>
+                                        <td>
+                                            File folder
+                                        </td>
+                                        <td>
+                                            900 KB
+                                        </td>
+                                        <td align="center">
+                                            <button class="md-btn md-btn-success md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" data-uk-modal="{target:'#modal_overflow'}"><i class="uk-icon-eye"></i></button>&nbsp; &nbsp;
+                                            <div id="modal_overflow" class="uk-modal">
+                                                <div class="uk-modal-dialog">
+                                                    <button type="button" class="uk-modal-close uk-close"></button>
+                                                    <h2 class="heading_d">doc.docx </h2>
+                                                    <hr>
+                                                    <p>
+                                                        some text here
+                                                    </p>
+                                                    
+                                                </div>
+                                            </div>
+                                            <button type="button" class="md-btn md-btn-primary md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" onclick="UIkit.modal.prompt('Edit File Name:', 'old file name', function(val){ if(val==''){UIkit.modal.alert('File name must not be null!');}else{ UIkit.modal.alert('Edit file name successfully!');} });">
+                                                <i class="uk-icon-pencil"></i>
+                                            </button> 
+                                            <button type="button" class="md-btn md-btn-danger md-btn-small md-btn-wave-light md-btn-icon waves-effect waves-button waves-light" onclick="UIkit.modal.confirm('Are you sure want to delete this File?', function(){ UIkit.modal.alert('Deleted!'); });"><i class="uk-icon-trash"></i></button>
+                                        </td>
+                                    </tr>
                             </tbody>
                         </table>
-                    </div>
+                    </div>  
                 </div>
             </div>
         </div>
