@@ -1,5 +1,9 @@
 <!doctype html>
-<html lang="en"> 
+<!--[if lte IE 9]> <html class="lte-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en"> <!--<![endif]-->
+
+
+<!-- Mirrored from altair_html.tzdthemes.com/page_blog_article.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Jul 2018 15:37:50 GMT -->
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
@@ -10,14 +14,14 @@
         <link rel="icon" type="image/png" href="../assets/img/favicon-16x16.png" sizes="16x16">
         <link rel="icon" type="image/png" href="../assets/img/favicon-32x32.png" sizes="32x32">
         
-        <title>Altair Admin v2.20.0</title>
+        <title>Hanu Codee</title>
         
         
         <!-- uikit -->
         <link rel="stylesheet" href="../bower_components/uikit/css/uikit.almost-flat.min.css" media="all">
         
         <!-- flag icons -->
-        <link rel="stylesheet" href="../assets/icons/fgit flags.min.css" media="all">
+        <link rel="stylesheet" href="../assets/icons/flags/flags.min.css" media="all">
         
         <!-- style switcher -->
         <link rel="stylesheet" href="../assets/css/style_switcher.min.css" media="all">
@@ -34,7 +38,7 @@
                 <div class="header_main_content">
                     <nav class="uk-navbar">
                         <div class="main_logo_top">
-                            <a href="index_login.html"><img src="../assets/img/LogoHCI1.png" alt="" height="50" width="160"/></a>
+                            <a href="index_editor.html"><img src="../assets/img/LogoHCI1.png" alt="" height="50" width="160"/></a>
                         </div>
                         
                         <!-- secondary sidebar switch -->
@@ -47,11 +51,11 @@
                                 <li><a href="#" id="main_search_btn" class="user_action_icon"><i class="material-icons md-24 md-light">&#xE8B6;</i></a></li>
                                 
                                 <li data-uk-dropdown="{mode:'click',pos:'bottom-right'}" aria-haspopup="true" aria-expanded="false" class="">
-                                        <a href="#" class="user_action_image"><img class="md-user-image" src="../assets/img/avatars/avatar_11_tn.png" alt=""></a>
+                                        <a href="#" class="user_action_image"><img class="md-user-image" src="../assets/img/avatars/avatar_02_tn.png" alt=""></a>
                                         <div class="uk-dropdown uk-dropdown-small uk-dropdown-bottom" aria-hidden="true" tabindex="" style="min-width: 160px; top: 47px; left: -44px;">
                                             <ul class="uk-nav js-uk-prevent">
                                                 <li><a href="info_user.html"><i class="uk-icon-user"></i> My profile</a></li>
-                                                <li><a href="index.html"><i class="uk-icon-sign-out"></i> Log out</a></li>
+                                                <li><a href="../index.html"><i class="uk-icon-sign-out"></i> Log out</a></li>
                                             </ul>
                                         </div>
                                 </li>
@@ -60,37 +64,42 @@
                         </div>
                     </nav>
                 </div>
-                <!-- slider end -->
-            </div>
-        </div>
-    </div> 
-    <!-- slider end -->
-    <!-- main header -->
-    <header id="header_main">
-        <div class="header_main_content">
-            <nav class="uk-navbar">
-                <div class="main_logo_top">
-                    <a href="index_login.html"><img src="assets/img/LogoHCI1.png" alt="" height="50" width="160"/></a>
+                <div class="header_main_search_form">
+                    <i class="md-icon header_main_search_close material-icons">&#xE5CD;</i>
+                    <form class="uk-form uk-autocomplete" data-uk-autocomplete="{source:'data/search_data.json'}">
+                        <input type="text" class="header_main_search_input" />
+                        <button class="header_main_search_btn uk-button-link"><i class="md-icon material-icons">&#xE8B6;</i></button>
+                        <script type="text/autocomplete">
+                            <ul class="uk-nav uk-nav-autocomplete uk-autocomplete-results">
+                                {{~items}}
+                                <li data-value="{{ $item.value }}">
+                                    <a href="{{ $item.url }}" class="needsclick">
+                                        {{ $item.value }}<br>
+                                        <span class="uk-text-muted uk-text-small">{{{ $item.text }}}</span>
+                                    </a>
+                                </li>
+                                {{/items}}
+                                <li data-value="autocomplete-value">
+                                    <a class="needsclick">
+                                        Autocomplete Text<br>
+                                        <span class="uk-text-muted uk-text-small">Helper text</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </script>
+                    </form>
                 </div>
-                
-                <!-- secondary sidebar switch -->
-                <a href="#" id="sidebar_secondary_toggle" class="sSwitch sSwitch_right sidebar_secondary_check">
-                    <span class="sSwitchIcon"></span>
-                </a>
-                
-                <div class="uk-navbar-flip">
-                    <ul class="uk-navbar-nav user_actions">
-                        <li><a href="#" id="main_search_btn" class="user_action_icon"><i class="material-icons md-24 md-light">&#xE8B6;</i></a></li>
-                        
-                        <li data-uk-dropdown="{mode:'click',pos:'bottom-right'}" aria-haspopup="true" aria-expanded="false" class="">
-                            <a href="#" class="user_action_image"><img class="md-user-image" src="assets/img/avatars/avatar_11_tn.png" alt=""></a>
-                            <div class="uk-dropdown uk-dropdown-small uk-dropdown-bottom" aria-hidden="true" tabindex="" style="min-width: 160px; top: 47px; left: -44px;">
-                                <ul class="uk-nav js-uk-prevent">
-                                    <li><a href="info_user.html"><i class="uk-icon-user"></i> My profile</a></li>
-                                    <li><a href="index.html"><i class="uk-icon-sign-out"></i> Log out</a></li>
-                                </ul>
-                            </div>
-                        </li>
+            </header>
+        <!-- main header end -->
+        <!-- top bar -->
+        <div id="top_bar">
+                <div class="md-top-bar">
+                    <ul id="menu_top" class="uk-clearfix">
+                        <ul id="breadcrumbs">
+                            <li><a href="index_editor.html">Home</a></li>
+                            <li><a href="cate_news_editor.html">Blog</a></li>
+                            <li><span>Details</span></li>
+                        </ul>
                     </ul>
                     
                 </div>
@@ -108,9 +117,9 @@
                                         <h1 style="text-align: center" class="uk-article-title">5 Necessary PC Hardware Components That Programmers Should Upgrade</h1>
                                         <p style="text-align: right" class="uk-article-meta">
                                             Posted by  James Clark on 12 April 2016
-                                            <br>Posted in <a href="#">Blog</a>
+                                            <br>Posted in <a href="cate_news_editor.html">Blog</a>
                                             <br>
-                                            <a href="cate_news_login.html">
+                                            <a href="cate_news_editor.html">
                                                 <span class="uk-badge">IT</span>
                                             </a>
                                             
@@ -147,150 +156,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="md-card">
-                        <div class="md-card-content">
-                            <h3 class="heading_d uk-margin-bottom">Top views</h3>
-                            <hr>
-                            <ul class="md-list">
-                                <li>
-                                    <div class="uk-grid" data-uk-grid-margin="">
-                                        <div class="uk-width-medium-1-4 uk-row-first">
-                                            <td>
-                                                <div class="md-card md-card-fullscreen-activate" >
-                                                    <div class="md-card-fullscreen-hide"> 
-                                                        <a href="news_details.html"> <img src="assets/img/gallery/Image02.jpg" alt=""></a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </div>
-                                        <div class="uk-width-medium-3-4">
-                                            <h2 class="blog_list_teaser_title uk-text-truncate"><a href="news_details.html" >How to become Master in PHP</a></h2>
-                                            <p> An attempt has been made to preserve as much documentation related to PHP 4. The reason for this is how our documentation is structured. Even so, the archived copy describes more aspects of PHP 4 than actual manual described in August 2014 (e.g. it covers more PHP 4 extensions).</p>
-                                            <p class="uk-article-meta">
-                                                Posted by  James Clark on 12 April 2016
-                                                <br>Posted in <a href="#">Blog</a>
-                                                <br>
-                                                <a href="cate_news.html"><span class="uk-badge">IT</span></a>
-                                                <a href="news_details.html" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary uk-float-right">Read more</a>                                                           
-                                            </p>
-                                        </div>                                               
-                                    </div>
-                                </li> 
-                                <li>
-                                    <div class="uk-grid" data-uk-grid-margin="">
-                                        <div class="uk-width-medium-1-4 uk-row-first">
-                                            <td>
-                                                <div class="md-card md-card-fullscreen-activate" >
-                                                    <div class="md-card-fullscreen-hide"> 
-                                                        <a href="news_details.html"> <img src="assets/img/gallery/Image02.jpg" alt=""></a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </div>
-                                        <div class="uk-width-medium-3-4">
-                                            <h2 class="blog_list_teaser_title uk-text-truncate"><a href="news_details.html" >How to become Master in PHP</a></h2>
-                                            <p> An attempt has been made to preserve as much documentation related to PHP 4. The reason for this is how our documentation is structured. Even so, the archived copy describes more aspects of PHP 4 than actual manual described in August 2014 (e.g. it covers more PHP 4 extensions).</p>
-                                            <p class="uk-article-meta">
-                                                Posted by  James Clark on 12 April 2016
-                                                <br>Posted in <a href="#">Blog</a>
-                                                <br>
-                                                <a href="cate_news.html"><span class="uk-badge">IT</span></a>
-                                                <a href="news_details.html" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary uk-float-right">Read more</a>                                                           
-                                            </p>
-                                        </div>                                               
-                                    </div>
-                                </li> 
-                                <li>
-                                    <div class="uk-grid" data-uk-grid-margin="">
-                                        <div class="uk-width-medium-1-4 uk-row-first">
-                                            <td>
-                                                <div class="md-card md-card-fullscreen-activate" >
-                                                    <div class="md-card-fullscreen-hide"> 
-                                                        <a href="news_details.html"> <img src="assets/img/gallery/Image02.jpg" alt=""></a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </div>
-                                        <div class="uk-width-medium-3-4">
-                                            <h2 class="blog_list_teaser_title uk-text-truncate"><a href="news_details.html" >How to become Master in PHP</a></h2>
-                                            <p> An attempt has been made to preserve as much documentation related to PHP 4. The reason for this is how our documentation is structured. Even so, the archived copy describes more aspects of PHP 4 than actual manual described in August 2014 (e.g. it covers more PHP 4 extensions).</p>
-                                            <p class="uk-article-meta">
-                                                Posted by  James Clark on 12 April 2016
-                                                <br>Posted in <a href="#">Blog</a>
-                                                <br>
-                                                <a href="cate_news.html"><span class="uk-badge">IT</span></a>
-                                                <a href="news_details.html" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary uk-float-right">Read more</a>                                                           
-                                            </p>
-                                        </div>                                               
-                                    </div>
-                                </li> 
-                                <li>
-                                    <div class="uk-grid" data-uk-grid-margin="">
-                                        <div class="uk-width-medium-1-4 uk-row-first">
-                                            <td>
-                                                <div class="md-card md-card-fullscreen-activate" >
-                                                    <div class="md-card-fullscreen-hide"> 
-                                                        <a href="news_details.html"> <img src="assets/img/gallery/Image02.jpg" alt=""></a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </div>
-                                        <div class="uk-width-medium-3-4">
-                                            <h2 class="blog_list_teaser_title uk-text-truncate"><a href="news_details.html" >How to become Master in PHP</a></h2>
-                                            <p> An attempt has been made to preserve as much documentation related to PHP 4. The reason for this is how our documentation is structured. Even so, the archived copy describes more aspects of PHP 4 than actual manual described in August 2014 (e.g. it covers more PHP 4 extensions).</p>
-                                            <p class="uk-article-meta">
-                                                Posted by  James Clark on 12 April 2016
-                                                <br>Posted in <a href="#">Blog</a>
-                                                <br>
-                                                <a href="cate_news.html"><span class="uk-badge">IT</span></a>
-                                                <a href="news_details.html" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary uk-float-right">Read more</a>                                                           
-                                            </p>
-                                        </div>                                               
-                                    </div>
-                                </li> 
-                                <li>
-                                    <div class="uk-grid" data-uk-grid-margin="">
-                                        <div class="uk-width-medium-1-4 uk-row-first">
-                                            <td>
-                                                <div class="md-card md-card-fullscreen-activate" >
-                                                    <div class="md-card-fullscreen-hide"> 
-                                                        <a href="news_details.html"> <img src="assets/img/gallery/Image02.jpg" alt=""></a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </div>
-                                        <div class="uk-width-medium-3-4">
-                                            <h2 class="blog_list_teaser_title uk-text-truncate"><a href="news_details.html" >How to become Master in PHP</a></h2>
-                                            <p> An attempt has been made to preserve as much documentation related to PHP 4. The reason for this is how our documentation is structured. Even so, the archived copy describes more aspects of PHP 4 than actual manual described in August 2014 (e.g. it covers more PHP 4 extensions).</p>
-                                            <p class="uk-article-meta">
-                                                Posted by  James Clark on 12 April 2016
-                                                <br>Posted in <a href="#">Blog</a>
-                                                <br>
-                                                <a href="cate_news.html"><span class="uk-badge">IT</span></a>
-                                                <a href="news_details.html" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary uk-float-right">Read more</a>                                                           
-                                            </p>
-                                        </div>                                               
-                                    </div>
-                                </li> 
-                            </ul>
-                            <hr>
-                            <ul class="uk-pagination">
-                                <li class="uk-disabled"><span><i class="uk-icon-angle-double-left"></i></span></li>
-                                <li class="uk-active"><span>1</span></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><span>…</span></li>
-                                <li><a href="#">20</a></li>
-                                <li><a href="#"><i class="uk-icon-angle-double-right"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="uk-width-medium-1-4">
-                    <div class="md-card">
-                        <div class="md-card-content">
+                        <div class="uk-width-medium-1-4">
                             <h5 class="uk-margin-small-bottom uk-text-upper">Recent Posts</h5>
                             <ul class="md-list uk-margin-remove">
                                 <li>
@@ -318,7 +184,6 @@
                                     </div>
                                 </li>
                             </ul>
-                            <hr>
                             <h5 class="uk-margin-small-bottom uk-text-upper  uk-margin-large">Tags</h5>
                             <div class="blog_tags">
                                 <a href="#" class="uk-badge">admin panel</a>
@@ -333,7 +198,6 @@
                                 <a href="#" class="uk-badge">less</a>
                                 <a href="#" class="uk-badge">uikit</a>
                             </div>
-                            <hr>
                             <h5 class="uk-margin-small-bottom uk-text-upper uk-margin-large">Top Authors</h5>
                             <ul class="md-list md-list-addon uk-margin-remove">
                                 <li>
@@ -373,7 +237,6 @@
                                     </div>
                                 </li>
                             </ul>
-                            <hr>
                             <h5 class="uk-margin-small-bottom uk-text-upper uk-margin-large">Categories</h5>
                             <ul class="md-list uk-margin-remove">
                                 <li>
@@ -417,16 +280,14 @@
                                                         <div class="md-card-content small-padding">
                                                             <img src="../assets/img/gallery/Image01.jpg" alt="" class="blog_list_teaser_image">
                                                             <div class="blog_list_teaser">
-                                                                <h2 class="blog_list_teaser_title uk-text-truncate"><a href="news_details_login.html" >5 Necessary PC Hardware Components</a></h2>
+                                                                <h2 class="blog_list_teaser_title uk-text-truncate"><a href="news_details_editor.html" >5 Necessary PC Hardware Components</a></h2>
                                                                 <p>So you want to code the next big app or make the next gaming phenomenon, but your hardware isn’t exactly cutting edge?</p>
                                                                 <span class="uk-text-muted uk-text-small">18.06.2016</span>
-                                                                <a href="cate_news_login.html"><span class="uk-badge">Information Technology</span></a>
+                                                                <a href="cate_news_editor.html"><span class="uk-badge">Information Technology</span></a>
                                                             </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="md-list-content">
-                                                                <span class="md-list-heading">Email</span>
-                                                                <span class="uk-text-small uk-text-muted uk-text-truncate">hanucodee@gmail.com</span>
+                                                            <div class="blog_list_footer">
+                                                                
+                                                                <a href="news_details_editor.html" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary uk-float-right">Read more</a>
                                                             </div>
                                                         </div>
                                                     </div>       
@@ -437,13 +298,13 @@
                                                             <div class="md-card-content small-padding">
                                                                 <img src="../assets/img/gallery/Image05.jpg" alt="" class="blog_list_teaser_image">
                                                                 <div class="blog_list_teaser">
-                                                                    <h2 class="blog_list_teaser_title uk-text-truncate"><a href="news_details_login.html" >The ways to destroy your PC friendly</a></h2>
+                                                                    <h2 class="blog_list_teaser_title uk-text-truncate"><a href="news_details_editor.html" >The ways to destroy your PC friendly</a></h2>
                                                                     <p>Those are a great starting point for seeing what to upgrade, and we’ll examine each of those specs in detail below</p>
                                                                     <span class="uk-text-muted uk-text-small">18.06.2016</span>
-                                                                    <a href="cate_news_login.html"><span class="uk-badge">Information Technology</span></a>
+                                                                    <a href="cate_news_editor.html"><span class="uk-badge">Information Technology</span></a>
                                                                 </div>
                                                                 <div class="blog_list_footer"> 
-                                                                    <a href="news_details_login.html" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary uk-float-right">Read more</a>
+                                                                    <a href="news_details_editor.html" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary uk-float-right">Read more</a>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -457,14 +318,14 @@
                                                             <div class="md-card-content small-padding">
                                                                 <img src="../assets/img/gallery/Image08.jpg" alt="" class="blog_list_teaser_image">
                                                                 <div class="blog_list_teaser">
-                                                                    <h2 class="blog_list_teaser_title uk-text-truncate"><a href="news_details_login.html" >Some secrets of binary</a></h2> 
+                                                                    <h2 class="blog_list_teaser_title uk-text-truncate"><a href="news_details_editor.html" >Some secrets of binary</a></h2> 
                                                                     <p>You may not know that the simple number like 1, 2,.. when change into binary will have some funny facts that make your day.</p>
                                                                     <span class="uk-text-muted uk-text-small">18.06.2016</span>
-                                                                    <a href="cate_news_login.html"><span class="uk-badge">Information Technology</span></a>
+                                                                    <a href="cate_news_editor.html"><span class="uk-badge">Information Technology</span></a>
                                                                 </div>
                                                                 <div class="blog_list_footer">
                                                                     
-                                                                    <a href="news_details_login.html" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary uk-float-right">Read more</a>
+                                                                    <a href="news_details_editor.html" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary uk-float-right">Read more</a>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -476,73 +337,34 @@
                                                         <div class="md-card-content small-padding">
                                                             <img src="../assets/img/gallery/Image03.jpg" alt="" class="blog_list_teaser_image">
                                                             <div class="blog_list_teaser">
-                                                                <h2 class="blog_list_teaser_title uk-text-truncate"><a href="news_details_login.html" >Vitae repudiandae.</a></h2>
+                                                                <h2 class="blog_list_teaser_title uk-text-truncate"><a href="news_details_editor.html" >Vitae repudiandae.</a></h2>
                                                                 <p>Consequatur et numquam ipsam et iusto quia sint ullam officiis mollitia nihil voluptatum possimus cum molestias </p>
                                                                 <span class="uk-text-muted uk-text-small">18.06.2016</span>
                                                             </div>
-                                                        </li>
-                                                        
-                                                        <li>
-                                                            <div class="md-list-content">
-                                                                <span class="md-list-heading">twitter.com/envato</span>
-                                                                <span class="uk-text-small uk-text-muted">Twitter</span>
+                                                            <div class="blog_list_footer">
+                                                                <div class="blog_list_footer_info">
+                                                                    <span class="uk-margin-right"><i class="material-icons"></i> <small>22</small></span>
+                                                                    <span><i class="material-icons"></i> <small>274</small></span>
+                                                                </div>
+                                                                <a href="news_details_editor.html" class="md-btn md-btn-small md-btn-flat md-btn-flat-primary uk-float-right">Read more</a>
                                                             </div>
-                                                        </li>
-                                                        
-                                                    </ul>
-                                                </div>
-                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                
+                                            </ul>
                                         </div>
+                                        
+                                        <a href="#" class="uk-slidenav uk-slidenav-previous" data-uk-slider-item="previous" draggable="false"></a>
+                                        <a href="#" class="uk-slidenav uk-slidenav-next" data-uk-slider-item="next" draggable="false"></a>
+                                        
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <hr>
-                    <div class="md-card">
-                        <div class="md-card-content">
-                            <h3 class="heading_b uk-margin-bottom">VCL team - Vietnamese's Code Lover</h3>
-                            <ul class="md-list md-list-addon uk-margin-bottom">
-                                <li>
-                                    <div class="md-list-addon-element">
-                                        <img class="md-user-image md-list-addon-avatar" src="assets/img/avatars/tung.jpg" alt=""/>
-                                    </div>
-                                    <div class="md-list-content">
-                                        <span class="md-list-heading">Tung NT</span>
-                                        <span class="uk-text-small uk-text-muted">Technical leader</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="md-list-addon-element">
-                                        <img class="md-user-image md-list-addon-avatar" src="assets/img/avatars/duc.jpg" alt=""/>
-                                    </div>
-                                    <div class="md-list-content">
-                                        <span class="md-list-heading">Duc NM</span>
-                                        <span class="uk-text-small uk-text-muted">Graphics + layout designer </span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="md-list-addon-element">
-                                        <img class="md-user-image md-list-addon-avatar" src="assets/img/avatars/linh.jpg" alt=""/>
-                                    </div>
-                                    <div class="md-list-content">
-                                        <span class="md-list-heading">Linh DTT</span>
-                                        <span class="uk-text-small uk-text-muted">Content maker and tester</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="md-list-addon-element">
-                                        <img class="md-user-image md-list-addon-avatar" src="assets/img/avatars/hung.jpg" alt=""/>
-                                    </div>
-                                    <div class="md-list-content">
-                                        <span class="md-list-heading">Hung PV</span>
-                                        <span class="uk-text-small uk-text-muted">Handle threads and tester </span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- info end -->
+                    
+                    
                     
                 </div>
             </div>
@@ -594,23 +416,67 @@
                     });
                 </script>
                 
-                $theme_switcher.children('li').removeClass('active_theme');
-                $(this).addClass('active_theme');
-                $html
-                .removeClass('app_theme_a app_theme_b app_theme_c app_theme_d app_theme_e app_theme_f app_theme_g app_theme_h app_theme_i app_theme_dark')
-                .addClass(this_theme);
+                <script>
+                    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+                    ga('create', 'UA-65191727-1', 'auto');
+                    ga('send', 'pageview');
+                </script>
                 
-                if(this_theme == '') {
-                    localStorage.removeItem('altair_theme');
-                    $('#kendoCSS').attr('href','bower_components/kendo-ui/styles/kendo.material.min.css');
-                } else {
-                    localStorage.setItem("altair_theme", this_theme);
-                    if(this_theme == 'app_theme_dark') {
-                        $('#kendoCSS').attr('href','bower_components/kendo-ui/styles/kendo.materialblack.min.css')
-                    } else {
-                        $('#kendoCSS').attr('href','bower_components/kendo-ui/styles/kendo.material.min.css');
-                    }
-                }
+                <div id="style_switcher">
+                    <div id="style_switcher_toggle"><i class="material-icons">&#xE8B8;</i></div>
+                    <div class="uk-margin-medium-bottom">
+                        <h4 class="heading_c uk-margin-bottom">Colors</h4>
+                        <ul class="switcher_app_themes" id="theme_switcher">
+                            <li class="app_style_default active_theme" data-app-theme="">
+                                <span class="app_color_main"></span>
+                                <span class="app_color_accent"></span>
+                            </li>
+                            <li class="switcher_theme_a" data-app-theme="app_theme_a">
+                                <span class="app_color_main"></span>
+                                <span class="app_color_accent"></span>
+                            </li>
+                            <li class="switcher_theme_b" data-app-theme="app_theme_b">
+                                <span class="app_color_main"></span>
+                                <span class="app_color_accent"></span>
+                            </li>
+                            <li class="switcher_theme_c" data-app-theme="app_theme_c">
+                                <span class="app_color_main"></span>
+                                <span class="app_color_accent"></span>
+                            </li>
+                            <li class="switcher_theme_d" data-app-theme="app_theme_d">
+                                <span class="app_color_main"></span>
+                                <span class="app_color_accent"></span>
+                            </li>
+                            <li class="switcher_theme_e" data-app-theme="app_theme_e">
+                                <span class="app_color_main"></span>
+                                <span class="app_color_accent"></span>
+                            </li>
+                            <li class="switcher_theme_f" data-app-theme="app_theme_f">
+                                <span class="app_color_main"></span>
+                                <span class="app_color_accent"></span>
+                            </li>
+                            <li class="switcher_theme_g" data-app-theme="app_theme_g">
+                                <span class="app_color_main"></span>
+                                <span class="app_color_accent"></span>
+                            </li>
+                            <li class="switcher_theme_h" data-app-theme="app_theme_h">
+                                <span class="app_color_main"></span>
+                                <span class="app_color_accent"></span>
+                            </li>
+                            <li class="switcher_theme_i" data-app-theme="app_theme_i">
+                                <span class="app_color_main"></span>
+                                <span class="app_color_accent"></span>
+                            </li>
+                            <li class="switcher_theme_dark" data-app-theme="app_theme_dark">
+                                <span class="app_color_main"></span>
+                                <span class="app_color_accent"></span>
+                            </li>
+                        </ul>
+                    </div>  
+                </div>
                 
                 <script>
                     $(function() {
@@ -754,104 +620,5 @@
                 </footer>
             </body>
             
-            // hide style switcher
-            $document.on('click keyup', function(e) {
-                if( $switcher.hasClass('switcher_active') ) {
-                    if (
-                    ( !$(e.target).closest($switcher).length )
-                    || ( e.keyCode == 27 )
-                    ) {
-                        $switcher.removeClass('switcher_active');
-                    }
-                }
-            });
-            
-            // get theme from local storage
-            if(localStorage.getItem("altair_theme") !== null) {
-                $theme_switcher.children('li[data-app-theme='+localStorage.getItem("altair_theme")+']').click();
-            }
-            
-            
-            // toggle mini sidebar
-            
-            // change input's state to checked if mini sidebar is active
-            if((localStorage.getItem("altair_sidebar_mini") !== null && localStorage.getItem("altair_sidebar_mini") == '1') || $body.hasClass('sidebar_mini')) {
-                $mini_sidebar_toggle.iCheck('check');
-            }
-            
-            $mini_sidebar_toggle
-            .on('ifChecked', function(event){
-                $switcher.removeClass('switcher_active');
-                localStorage.setItem("altair_sidebar_mini", '1');
-                localStorage.removeItem('altair_sidebar_slim');
-                location.reload(true);
-            })
-            .on('ifUnchecked', function(event){
-                $switcher.removeClass('switcher_active');
-                localStorage.removeItem('altair_sidebar_mini');
-                location.reload(true);
-            });
-            
-            // toggle slim sidebar
-            
-            // change input's state to checked if mini sidebar is active
-            if((localStorage.getItem("altair_sidebar_slim") !== null && localStorage.getItem("altair_sidebar_slim") == '1') || $body.hasClass('sidebar_slim')) {
-                $slim_sidebar_toggle.iCheck('check');
-            }
-            
-            $slim_sidebar_toggle
-            .on('ifChecked', function(event){
-                $switcher.removeClass('switcher_active');
-                localStorage.setItem("altair_sidebar_slim", '1');
-                localStorage.removeItem('altair_sidebar_mini');
-                location.reload(true);
-            })
-            .on('ifUnchecked', function(event){
-                $switcher.removeClass('switcher_active');
-                localStorage.removeItem('altair_sidebar_slim');
-                location.reload(true);
-            });
-            
-            // toggle boxed layout
-            
-            if((localStorage.getItem("altair_layout") !== null && localStorage.getItem("altair_layout") == 'boxed') || $body.hasClass('boxed_layout')) {
-                $boxed_layout_toggle.iCheck('check');
-                $body.addClass('boxed_layout');
-                $(window).resize();
-            }
-            
-            $boxed_layout_toggle
-            .on('ifChecked', function(event){
-                $switcher.removeClass('switcher_active');
-                localStorage.setItem("altair_layout", 'boxed');
-                location.reload(true);
-            })
-            .on('ifUnchecked', function(event){
-                $switcher.removeClass('switcher_active');
-                localStorage.removeItem('altair_layout');
-                location.reload(true);
-            });
-            
-            // main menu accordion mode
-            if($sidebar_main.hasClass('accordion_mode')) {
-                $accordion_mode_toggle.iCheck('check');
-            }
-            
-            $accordion_mode_toggle
-            .on('ifChecked', function(){
-                $sidebar_main.addClass('accordion_mode');
-            })
-            .on('ifUnchecked', function(){
-                $sidebar_main.removeClass('accordion_mode');
-            });
-            
-            
-        });
-    </script>
-    <footer style="text-align: center" id="footer">
-        © 2019 <a href="#">Hanu Codee</a>, All rights reserved.
-    </footer>
-</body>
-
-<!-- Mirrored from altair_html.tzdthemes.com/page_blog_article.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Jul 2018 15:37:50 GMT -->
-</html>
+            <!-- Mirrored from altair_html.tzdthemes.com/page_blog_article.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Jul 2018 15:37:50 GMT -->
+            </html>
