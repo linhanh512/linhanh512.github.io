@@ -121,12 +121,62 @@
     <div id="top_bar">
         <div class="md-top-bar">
             <ul id="menu_top" class="uk-clearfix">
-                <ul id="breadcrumbs">
-                    <li><a href="index_login.html">Home</a></li>
-                    <li><a href="#">Latest Posts</a></li>
-                </ul>
+                <li class="uk-hidden-small">
+                    <a href="index.html"><i class="material-icons">&#xE88A;</i></a>
+                </li>
+                <li class="uk-hidden-small">
+                    <a href="cate_news_login.html">Blog</a>
+                </li>
+                <li class="uk-hidden-small">
+                    <a href="cate_news_login.html">Most View</a>
+                </li>
+                <li class="uk-hidden-small">
+                    <a href="latest_news_login.html">Latest Post</a>
+                </li>
+                <li class="uk-hidden-small">
+                    <a href="cate_news_login.html">Dev's Life</a>
+                </li>
+                <li class="uk-button-dropdown uk-hidden-small" data-uk-dropdown>
+                    <a href="#">Coding Language</a>
+                    <div class="uk-dropdown">
+                        <ul class="uk-nav uk-nav-dropdown">
+                            <li><a href="cate_news_login.html">Java</a></li>
+                            <li><a href="cate_news_login.html">PHP</a></li>
+                            <li><a href="cate_news_login.html">JavaScript</a></li>
+                            <li><a href="cate_news_login.html">Python</a></li>
+                            <li class="uk-nav-divider"></li>
+                            <li><a href="cate_news_login.html">Others...</a></li>
+                        </ul>
+                    </div> 
+                </li>
+                
+                <!-- when small -->
+                <li data-uk-dropdown="justify:'#top_bar'" class="uk-visible-small">
+                    <a href="#"><i class="material-icons">&#xE5D2;</i></a>
+                    <div class="uk-dropdown uk-dropdown-width-2">
+                        <div class="uk-grid uk-dropdown-grid" data-uk-grid-margin>
+                            <div class="uk-width-1-2">
+                                <ul class="uk-nav uk-nav-dropdown">
+                                    <li><a href="cate_news_login.html">Blog</a></li>
+                                    <li><a href="cate_news_login.html">Most Views</a></li>
+                                    <li><a href="cate_news_login.html">Latest Posts</a></li>
+                                    <li><a href="cate_news_login.html">Dev's Life</a></li>
+                                    <li class="uk-nav-divider"></li>
+                                    <li class="uk-nav-header">Coding language</li>
+                                    <li><a href="cate_news_login.html">Java</a></li>
+                                    <li><a href="cate_news_login.html">PHP</a></li>
+                                    <li><a href="cate_news_login.html">JavaScript</a></li>
+                                    <li><a href="cate_news_login.html">Python</a></li>
+                                    <li class="uk-nav-divider"></li>
+                                    <li><a href="cate_news_login.html">Other</a></li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </li>
+                <!-- when small end -->
             </ul>
-            
         </div>
     </div>
     <!-- end top bar -->
@@ -137,6 +187,11 @@
                 <div class="uk-width-2-3">
                     <div class="md-card">
                         <div class=" md-card-content">
+                            <ul id="breadcrumbs">
+                                <li><a href="index_login.html">Home</a></li>
+                                <li><a href="#">Latest Posts</a></li>
+                            </ul>
+                            <hr>
                             <h2 class="heading_d uk-margin-bottom" >Latest Posts</h2>
                             <hr>
                             <div class="uk-grid">

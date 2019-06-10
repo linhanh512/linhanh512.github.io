@@ -92,16 +92,65 @@
     <div id="top_bar">
         <div class="md-top-bar">
             <ul id="menu_top" class="uk-clearfix">
-                <ul id="breadcrumbs">
-                    <li><a href="index_editor.html">Home</a></li>
-                    <li><a href="cate_news_editor.html">Blog</a></li>
-                    <li><span>Details</span></li>
-                </ul>
+                <li class="uk-hidden-small">
+                    <a href="index_editor.html"><i class="material-icons">&#xE88A;</i></a>
+                </li>
+                <li class="uk-hidden-small">
+                    <a href="cate_news_editor.html">Blog</a>
+                </li>
+                <li class="uk-hidden-small">
+                    <a href="cate_news_editor.html">Most View</a>
+                </li>
+                <li class="uk-hidden-small">
+                    <a href="latest_news_editor.html">Latest Post</a>
+                </li>
+                <li class="uk-hidden-small">
+                    <a href="cate_news_editor.html">Dev's Life</a>
+                </li>
+                <li class="uk-button-dropdown uk-hidden-small" data-uk-dropdown>
+                    <a href="#">Coding Language</a>
+                    <div class="uk-dropdown">
+                        <ul class="uk-nav uk-nav-dropdown">
+                            <li><a href="cate_news_editor.html">Java</a></li>
+                            <li><a href="cate_news_editor.html">PHP</a></li>
+                            <li><a href="cate_news_editor.html">JavaScript</a></li>
+                            <li><a href="cate_news_editor.html">Python</a></li>
+                            <li class="uk-nav-divider"></li>
+                            <li><a href="cate_news_editor.html">Others...</a></li>
+                        </ul>
+                    </div> 
+                </li>
+                
+                <!-- when small -->
+                <li data-uk-dropdown="justify:'#top_bar'" class="uk-visible-small">
+                    <a href="#"><i class="material-icons">&#xE5D2;</i></a>
+                    <div class="uk-dropdown uk-dropdown-width-2">
+                        <div class="uk-grid uk-dropdown-grid" data-uk-grid-margin>
+                            <div class="uk-width-1-2">
+                                <ul class="uk-nav uk-nav-dropdown">
+                                    <li><a href="cate_news_editor.html">Blog</a></li>
+                                    <li><a href="cate_news_editor.html">Most Views</a></li>
+                                    <li><a href="cate_news_editor.html">Latest Posts</a></li>
+                                    <li><a href="cate_news_editor.html">Dev's Life</a></li>
+                                    <li class="uk-nav-divider"></li>
+                                    <li class="uk-nav-header">Coding language</li>
+                                    <li><a href="cate_news_editor.html">Java</a></li>
+                                    <li><a href="cate_news_editor.html">PHP</a></li>
+                                    <li><a href="cate_news_editor.html">JavaScript</a></li>
+                                    <li><a href="cate_news_editor.html">Python</a></li>
+                                    <li class="uk-nav-divider"></li>
+                                    <li><a href="cate_news_editor.html">Other</a></li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </li>
+                <!-- when small end -->
             </ul>
-            
         </div>
     </div>
-    <!-- top bar end -->
+    <!-- end top bar -->
     
     <div id="page_content">
         <div id="page_content_inner">
@@ -110,6 +159,11 @@
                 <div class="uk-width-medium-3-4">
                     <div class="md-card">
                         <div class="md-card-content large-padding">
+                            <ul id="breadcrumbs">
+                                <li><a href="index_editor.html">Home</a></li>
+                                <li><a href="cate_news_editor.html">Blog</a></li>
+                                <li><span>Details</span></li>
+                            </ul><hr>
                             <div class="uk-article">
                                 <h1 style="text-align: center" class="uk-article-title">5 Necessary PC Hardware Components That Programmers Should Upgrade</h1>
                                 <p style="text-align: right" class="uk-article-meta">
